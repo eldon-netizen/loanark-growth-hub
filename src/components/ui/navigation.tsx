@@ -7,7 +7,12 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", href: "/" },
+    { label: "Flyers", href: "/flyers" },
     { label: "Business Development", href: "/business-development" },
+    { label: "Ultimate Listing Tool", href: "/ultimate-listing-tool" },
+    { label: "Sell Like the Builders", href: "/sell-like-builders" },
+    { label: "Events", href: "/events" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
