@@ -6,13 +6,13 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Flyers", href: "#flyers" },
-    { label: "Business Development", href: "#business-development" },
-    { label: "Ultimate Listing Tool", href: "#ultimate-listing" },
-    { label: "Sell Like the Builders", href: "#sell-builders" },
-    { label: "Events", href: "#events" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Flyers", href: "/services#flyers" },
+    { label: "Business Development", href: "/services#business-development" },
+    { label: "Ultimate Listing Tool", href: "/services#ultimate-listing" },
+    { label: "Sell Like the Builders", href: "/services#sell-builders" },
+    { label: "Events", href: "/services#events" },
+    { label: "Contact", href: "/services#contact" },
   ];
 
   return (
