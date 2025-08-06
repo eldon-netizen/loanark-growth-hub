@@ -71,7 +71,7 @@ const Flyers = () => {
                         <img 
                           src={flyer.image} 
                           alt={flyer.title}
-                          className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-80 object-contain object-top bg-gray-50 group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                       </div>
