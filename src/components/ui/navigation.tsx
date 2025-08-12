@@ -18,13 +18,13 @@ const Navigation = () => {
   return (
     <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/721c0105-99a4-41b0-9993-c3c4ba7cd536.png" 
               alt="LoanArk header logo" 
-              className="h-24 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
