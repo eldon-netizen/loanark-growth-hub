@@ -6,37 +6,37 @@ const serviceImageSrc = "/lovable-uploads/b0ce7982-2306-47e9-88a3-4d9f58fd5451.p
 const ServicesSection = () => {
   const services = [
     {
-      icon: <img src={serviceImageSrc} alt="Marketing Flyers logo" className="w-full h-full object-cover" loading="lazy" />,
+      icon: <img src={serviceImageSrc} alt="Marketing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Marketing Flyers",
       description: "Professional, customizable marketing flyers that showcase your mortgage services and attract potential clients.",
       buttonText: "View Templates"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Listing Flyers logo" className="w-full h-full object-cover" loading="lazy" />,
+      icon: <img src={serviceImageSrc} alt="Listing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Listing Flyers",
       description: "Eye-catching property listing flyers that help real estate agents market properties effectively.",
       buttonText: "Browse Designs"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Business Development Tools logo" className="w-full h-full object-cover" loading="lazy" />,
+      icon: <img src={serviceImageSrc} alt="Business Development Tools logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Business Development Tools",
       description: "Comprehensive tools and strategies to grow your network, generate leads, and expand your business.",
       buttonText: "Explore Tools"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Ultimate Buyer Presentation logo" className="w-full h-full object-cover" loading="lazy" />,
+      icon: <img src={serviceImageSrc} alt="Ultimate Buyer Presentation logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Ultimate Buyer Presentation",
       description: "Complete presentation package to guide homebuyers through the mortgage process with confidence.",
       buttonText: "Get Presentation"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Buyer & Seller Scripts logo" className="w-full h-full object-cover" loading="lazy" />,
+      icon: <img src={serviceImageSrc} alt="Buyer & Seller Scripts logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Buyer & Seller Scripts",
       description: "Proven conversation scripts for engaging with buyers and sellers at every stage of the process.",
       buttonText: "Access Scripts"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Social Media Posts logo" className="w-full h-full object-cover" loading="lazy" />,
+      icon: <img src={serviceImageSrc} alt="Social Media Posts logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Social Media Posts",
       description: "Ready-to-use social media content that keeps your audience engaged and builds your brand.",
       buttonText: "View Content"
@@ -61,7 +61,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50">
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 h-12 w-12 overflow-hidden rounded-full bg-loanark-light-blue/10 group-hover:bg-loanark-blue transition-all duration-300">
+                <div className="mb-4 w-full h-14 md:h-16">
                   {service.icon}
                 </div>
                 <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-2">
