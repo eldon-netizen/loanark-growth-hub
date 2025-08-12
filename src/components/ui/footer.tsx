@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <img 
-              src="/lovable-uploads/image-1754995077357.png" 
+              src="/lovable-uploads/4fe0652e-11e2-44d0-ab1f-d8bc856afb84.png" 
               alt="LoanArk footer logo" 
               className="h-12 w-auto mb-6"
             />
