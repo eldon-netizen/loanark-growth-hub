@@ -22,7 +22,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/header_icon.png" 
+              src="/lovable-uploads/image-1754995091237.png" 
               alt="LoanArk header logo" 
               className="h-12 w-auto"
             />
