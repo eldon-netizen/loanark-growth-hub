@@ -61,7 +61,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50">
               <CardHeader className="text-center pb-4">
-                <div className="mb-4 w-full h-14 md:h-16">
+                <div className="mb-4 w-full h-20 md:h-24">
                   {service.icon}
                 </div>
                 <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-2">

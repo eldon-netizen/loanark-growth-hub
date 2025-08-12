@@ -24,7 +24,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/60bbe1b1-99f2-4bec-9b2d-462761dcfb69.png" 
               alt="LoanArk" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
