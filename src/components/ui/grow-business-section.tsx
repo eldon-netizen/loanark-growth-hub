@@ -43,7 +43,7 @@ const GrowBusinessSection = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {playbooks.map((playbook, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 bg-card">
+            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 bg-card h-full flex flex-col">
               <CardHeader className="text-center pb-6">
                 <div className="mx-auto mb-4 p-4 bg-gradient-accent rounded-full text-white shadow-glow">
                   {playbook.icon}
@@ -55,7 +55,7 @@ const GrowBusinessSection = () => {
                   {playbook.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="pt-0">
+              <CardContent className="pt-0 mt-auto flex flex-col">
                 <div className="mb-6">
                   <h4 className="font-montserrat font-semibold text-foreground mb-3">What's Included:</h4>
                   <ul className="space-y-2">
@@ -68,7 +68,7 @@ const GrowBusinessSection = () => {
                   </ul>
                 </div>
                 <Button 
-                  className="w-full bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="w-full bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold transition-all duration-300 shadow-md hover:shadow-lg mt-auto"
                 >
                   {playbook.buttonText}
                 </Button>

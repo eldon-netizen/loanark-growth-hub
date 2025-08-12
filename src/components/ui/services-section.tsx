@@ -59,8 +59,8 @@ const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50">
-              <CardHeader className="text-center pb-4">
+            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 h-full flex flex-col">
+              <CardHeader className="text-center pb-4 flex-1">
                 <div className="mb-4 w-full h-20 md:h-24">
                   {service.icon}
                 </div>
@@ -71,7 +71,7 @@ const ServicesSection = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-0">
+              <CardContent className="text-center pt-0 mt-auto">
                 <Button 
                   variant="outline" 
                   className="w-full font-poppins font-medium border-loanark-blue text-loanark-blue hover:bg-loanark-blue hover:text-white transition-all duration-300"
