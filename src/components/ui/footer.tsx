@@ -8,8 +8,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <img 
-              src="/lovable-uploads/60bbe1b1-99f2-4bec-9b2d-462761dcfb69.png" 
-              alt="LoanArk" 
+              src="/lovable-uploads/footer_icon.png" 
+              alt="LoanArk footer logo" 
               className="h-12 w-auto mb-6"
             />
             <p className="text-primary-foreground/80 font-poppins mb-6 max-w-md">
