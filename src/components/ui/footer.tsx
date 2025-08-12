@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/4fe0652e-11e2-44d0-ab1f-d8bc856afb84.png" 
               alt="LoanArk footer logo" 
-              className="h-12 w-auto mb-6"
+              className="h-[4.5rem] w-auto mb-6"
             />
             <p className="text-primary-foreground/80 font-poppins mb-6 max-w-md">
               Empowering mortgage professionals and real estate agents with cutting-edge 
