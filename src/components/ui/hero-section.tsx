@@ -16,7 +16,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-primary-foreground mb-6 leading-tight">
             Free On‑Demand 
