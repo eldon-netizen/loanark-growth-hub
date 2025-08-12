@@ -61,11 +61,11 @@ const Flyers = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-4 text-center text-foreground">
               {category}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 justify-center place-items-center">
               {flyerTemplates
                 .filter(flyer => flyer.category === category)
                 .map((flyer) => (
-                  <Card key={flyer.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+                  <Card key={flyer.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 w-full max-w-md mx-auto">
                     <CardHeader className="p-0">
                       <div className="relative overflow-hidden rounded-t-lg">
                         <img 
