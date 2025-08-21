@@ -22,7 +22,7 @@ const HeroSection = () => {
             Free On‑Demand 
             <span className="text-loanark-light-blue"> Mortgage Marketing</span>
             <br className="mb-4" />
-            <span className="block mt-4">Solution for Real Estate Professionals</span>
+            <span className="block mt-5">Solution for Real Estate Professionals</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-poppins mb-8 max-w-3xl leading-relaxed">
