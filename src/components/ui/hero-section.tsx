@@ -18,11 +18,11 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto p-[15px] relative z-10">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-primary-foreground mb-6 leading-relaxed">
             Free On‑Demand 
             <span className="text-loanark-light-blue"> Mortgage Marketing</span>
-            <br />
-            Solution for Real Estate Professionals
+            <br className="mb-4" />
+            <span className="block mt-4">Solution for Real Estate Professionals</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-poppins mb-8 max-w-3xl leading-relaxed">
