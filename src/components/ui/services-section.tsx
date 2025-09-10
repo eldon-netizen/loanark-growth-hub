@@ -64,10 +64,10 @@ const ServicesSection = () => {
                     {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-2">
+                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 -mt-2">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground font-poppins">
+                <CardDescription className="text-muted-foreground font-poppins -mt-1">
                   {service.description}
                 </CardDescription>
               </CardHeader>
