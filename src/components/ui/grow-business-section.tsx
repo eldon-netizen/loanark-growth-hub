@@ -7,14 +7,14 @@ const GrowBusinessSection = () => {
     {
       icon: <BookOpen className="h-8 w-8" />,
       title: "Ultimate Listing Tool",
-      description: "Complete guide to mastering the listing process, from initial contact to closing. Includes templates, scripts, and proven strategies.",
+      description: "Order a pre-appraisal at a reduced cost to better understand market value and whether a seller credit should be offered to lower the buyer's interest rate to avoid price reductions on a listing that is not receiving offers.",
       features: ["Listing presentation templates", "Market analysis tools", "Closing checklists"],
       buttonText: "Access Playbook"
     },
     {
       icon: <Building className="h-8 w-8" />,
       title: "Sell Like the Builders",
-      description: "Learn the secrets of new construction sales and how to work effectively with builders and developers.",
+      description: "The Stolan Team partners with agents and their sellers to provide below market interest rates to homebuyers and help listings sell faster, sharing the cost of a temporary buydown with the seller to make the offer more attractive and cost effective.",
       features: ["Builder relationship strategies", "New construction processes", "Sales techniques"],
       buttonText: "Get Strategies"
     },
