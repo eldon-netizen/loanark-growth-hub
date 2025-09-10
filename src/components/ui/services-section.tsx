@@ -10,7 +10,7 @@ const ServicesSection = () => {
       buttonText: "View Templates"
     },
     {
-      icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" className="w-full h-full object-contain -mb-8" loading="lazy" />,
       title: "Listing Flyers",
       description: "Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.",
       buttonText: "Browse Designs"
