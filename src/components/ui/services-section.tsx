@@ -1,42 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-// Replaced lucide icons with uploaded image for services logos
-const serviceImageSrc = "/lovable-uploads/b0ce7982-2306-47e9-88a3-4d9f58fd5451.png";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <img src={serviceImageSrc} alt="Marketing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/60bbe1b1-99f2-4bec-9b2d-462761dcfb69.png" alt="Marketing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Marketing Flyers",
       description: "Professional, customizable marketing flyers that showcase your mortgage services and attract potential clients.",
       buttonText: "View Templates"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Listing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/721c0105-99a4-41b0-9993-c3c4ba7cd536.png" alt="Listing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Listing Flyers",
       description: "Eye-catching property listing flyers that help real estate agents market properties effectively.",
       buttonText: "Browse Designs"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Business Development Tools logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/b48fef77-6e0e-4fb5-bb83-584f1e70278a.png" alt="Business Development Tools logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Business Development Tools",
       description: "Comprehensive tools and strategies to grow your network, generate leads, and expand your business.",
       buttonText: "Explore Tools"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Ultimate Buyer Presentation logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/e263e3ba-e718-4c0d-b581-4c456ce5c0a5.png" alt="Ultimate Buyer Presentation logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Ultimate Buyer Presentation",
       description: "Complete presentation package to guide homebuyers through the mortgage process with confidence.",
       buttonText: "Get Presentation"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Buyer & Seller Scripts logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/5e934de5-11a7-4a87-8c16-65b2feabfa04.png" alt="Buyer & Seller Scripts logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Buyer & Seller Scripts",
       description: "Proven conversation scripts for engaging with buyers and sellers at every stage of the process.",
       buttonText: "Access Scripts"
     },
     {
-      icon: <img src={serviceImageSrc} alt="Social Media Posts logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/4fe0652e-11e2-44d0-ab1f-d8bc856afb84.png" alt="Social Media Posts logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Social Media Posts",
       description: "Ready-to-use social media content that keeps your audience engaged and builds your brand.",
       buttonText: "View Content"
