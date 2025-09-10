@@ -1,14 +1,32 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleBusinessDevClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      // Already on homepage, just scroll to section
+      const section = document.getElementById('business-development');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to homepage with hash
+      navigate('/#business-development');
+    }
+    setIsMenuOpen(false);
+  };
 
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Flyers", href: "/flyers" },
-    { label: "Business Development", href: "/business-development" },
+    { label: "Business Development", href: "/#business-development", onClick: handleBusinessDevClick },
     { label: "Ultimate Listing Tool", href: "/ultimate-listing-tool" },
     { label: "Sell Like the Builders", href: "/sell-like-builders" },
     { label: "Events", href: "/events" },
@@ -34,6 +52,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={item.onClick}
                 className="text-foreground hover:text-accent transition-colors font-poppins text-sm font-medium"
               >
                 {item.label}
@@ -69,7 +88,7 @@ const Navigation = () => {
                   key={item.label}
                   href={item.href}
                   className="block px-3 py-2 text-foreground hover:text-accent transition-colors font-poppins text-sm font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={item.onClick || (() => setIsMenuOpen(false))}
                 >
                   {item.label}
                 </a>
