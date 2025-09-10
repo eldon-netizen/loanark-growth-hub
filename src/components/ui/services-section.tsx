@@ -22,7 +22,7 @@ const ServicesSection = () => {
       buttonText: "Explore Tools"
     },
     {
-      icon: <img src="/lovable-uploads/4bbe647f-056d-42d0-bc6f-79053f58d035.png" alt="Ultimate Buyer Presentation logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/fc182628-0ed6-469b-bbdb-101f4d983ac6.png" alt="Ultimate Buyer Presentation logo" className="w-full h-full object-contain" loading="lazy" />,
       title: "Ultimate Buyer Presentation",
       description: "Complete presentation package to guide homebuyers through the mortgage process with confidence.",
       buttonText: "Get Presentation"
@@ -59,7 +59,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 h-full flex flex-col">
               <CardHeader className="text-center pb-4 flex-1">
-                <div className="mb-4 w-full h-[120px] md:h-[144px]">
+                <div className="mb-4 w-full h-[240px] md:h-[288px]">
                   {service.icon}
                 </div>
                 <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-2">
