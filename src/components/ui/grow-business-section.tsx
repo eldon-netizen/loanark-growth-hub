@@ -9,14 +9,16 @@ const GrowBusinessSection = () => {
       title: "Ultimate Listing Tool",
       description: "Order a pre-appraisal at a reduced cost to better understand market value and whether a seller credit should be offered to lower the buyer's interest rate to avoid price reductions on a listing that is not receiving offers.",
       features: ["Listing presentation templates", "Market analysis tools", "Closing checklists"],
-      buttonText: "Access Playbook"
+      buttonText: "Access Playbook",
+      link: "https://www.canva.com/design/DAGx7VYeJ-g/tgpWeNiHWz6MpDDxPU8nQg/view?utm_content=DAGx7VYeJ-g&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9bd8f88caa"
     },
     {
       icon: <Building className="h-8 w-8" />,
       title: "Sell Like the Builders",
       description: "The Stolan Team partners with agents and their sellers to provide below market interest rates to homebuyers and help listings sell faster, sharing the cost of a temporary buydown with the seller to make the offer more attractive and cost effective.",
       features: ["Builder relationship strategies", "New construction processes", "Sales techniques"],
-      buttonText: "Get Strategies"
+      buttonText: "Get Strategies",
+      link: "https://www.canva.com/design/DAGyXdUmrQ4/WvOumRLKzjCM7jA-FpIc5Q/view?utm_content=DAGyXdUmrQ4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=habd27282af"
     }
   ];
 
@@ -60,11 +62,18 @@ const GrowBusinessSection = () => {
                     ))}
                   </ul>
                 </div>
-                <Button 
-                  className="w-full bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold transition-all duration-300 shadow-md hover:shadow-lg mt-auto"
+                <a 
+                  href={playbook.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {playbook.buttonText}
-                </Button>
+                  <Button 
+                    asChild
+                    className="w-full bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold transition-all duration-300 shadow-md hover:shadow-lg mt-auto"
+                  >
+                    <span>{playbook.buttonText}</span>
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
