@@ -10,14 +10,14 @@ const Flyers = () => {
       id: 1,
       title: "Open House Flyer",
       description: "Clean, beautiful, and straight to the point. Perfect for showcasing open house events and property details.",
-      image: "/lovable-uploads/5e934de5-11a7-4a87-8c16-65b2feabfa04.png",
+      image: "/lovable-uploads/OpenHouseFlyer.png",
       category: "Listing & Open House Flyers"
     },
     {
       id: 2,
       title: "Monthly Payment Breakdown",
       description: "Show buyers the affordability of properties with detailed payment calculations and mortgage information.",
-      image: "/lovable-uploads/e263e3ba-e718-4c0d-b581-4c456ce5c0a5.png",
+      image: "/lovable-uploads/MonthlyPaymentListingFlyer.png",
       category: "Listing & Open House Flyers"
     },
     {
@@ -31,7 +31,7 @@ const Flyers = () => {
       id: 4,
       title: "Sell Like The Builders",
       description: "Help sellers leverage the same marketing strategy that builders use to sell homes faster with attractive financing options.",
-      image: "/lovable-uploads/b48fef77-6e0e-4fb5-bb83-584f1e70278a.png",
+      image: "/lovable-uploads/SellLiketheBuilders.png",
       category: "Marketing Strategy"
     },
     {
@@ -66,7 +66,7 @@ const Flyers = () => {
       id: 9,
       title: "Homebuyer Journey",
       description: "Guide potential buyers through the complete home buying process with this step-by-step journey overview.",
-      image: "/lovable-uploads/435ae609-334d-4d29-aae1-7315efad1595.png",
+      image: "/lovable-uploads/HomebuyerJourney.png",
       category: "Educational Flyers"
     },
     {
