@@ -10,7 +10,7 @@ const Flyers = () => {
       id: 1,
       title: "Open House Flyer",
       description: "Clean, beautiful, and straight to the point. Perfect for showcasing open house events and property details.",
-      image: "/lovable-uploads/OpenHouseFlyer.png",
+      image: "/lovable-uploads/HomebuyerJourney.png",
       category: "Listing & Open House Flyers"
     },
     {
