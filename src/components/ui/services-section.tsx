@@ -70,8 +70,6 @@ const ServicesSection = () => {
             </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
   };
 export default ServicesSection;
-}
