@@ -24,7 +24,7 @@ const Flyers = () => {
       id: 3,
       title: "Jared Open House Flyer",
       description: "Modern and professional design that captures attention while maintaining sophistication. Ideal for showcasing property highlights and driving qualified traffic to your open house events.",
-      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/ListingFlyers/JaredOpenHouseFlyer.png",
       category: "Listing & Open House Flyers"
     },
     {
@@ -38,28 +38,28 @@ const Flyers = () => {
       id: 5,
       title: "Ultimate Condo Buyer Presentation",
       description: "Comprehensive marketing toolkit designed specifically for condo buyers. Navigate HOA considerations, amenity values, and urban lifestyle benefits with this detailed presentation guide.",
-      image: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/marketingStrategy/UltimateCondoBuyerPresentation.png",
       category: "Marketing Strategy"
     },
     {
       id: 6,
       title: "Unlock Your Dream Home with Confidence",
       description: "Empower buyers with strategic insights and proven negotiation tactics. This flyer transforms hesitant prospects into confident purchasers ready to make competitive offers.",
-      image: "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/marketingStrategy/UnlockYourDreamHomewithConfidence.png",
       category: "Marketing Strategy"
     },
     {
       id: 7,
       title: "Family Opportunity Flyer",
       description: "Help families discover creative financing solutions for multi-generational home purchases. Perfect for explaining FHA family opportunity mortgages and their benefits for helping loved ones achieve homeownership.",
-      image: "https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/marketingStrategy/FamilyOpportunityFlyer.png",
       category: "Marketing Strategy"
     },
     {
       id: 8,
       title: "Bridge Loan Flyer",
       description: "Educate clients on seamless home transitions with bridge financing options. Show sellers how to purchase their dream home before selling, eliminating timing stress and strengthening their buying position.",
-      image: "https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/marketingStrategy/BridgeLoanFlyer.png",
       category: "Marketing Strategy"
     },
     {
@@ -73,14 +73,14 @@ const Flyers = () => {
       id: 10,
       title: "Ultimate Condo Listing Presentation",
       description: "Expert guidance on successfully marketing and selling condominiums. This educational tool helps sellers understand the unique aspects of condo transactions and market positioning.",
-      image: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/educational/UltimateCondoListingPresentation.png.png",
       category: "Educational Flyers"
     },
     {
       id: 11,
       title: "Pre-Approval Process Co-Brand",
       description: "Demystify the mortgage pre-approval process with this collaborative lender partnership flyer. Build trust by showing buyers exactly what to expect, required documents, and timeline for loan approval.",
-      image: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/educational/PreApprovalProcessCoBrand.png.png",
       category: "Educational Flyers"
     }
   ];
