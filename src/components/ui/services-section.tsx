@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 const ServicesSection = () => {
   const services = [{
-    icon: <img src="/lovable-uploads/b3136bd0-48d1-4d0a-9ca2-6a9212a9c785.png" alt="Marketing Flyers logo" loading="lazy" className="w-full h-full object-contain -top-20" />,
+    icon: <img src="/lovable-uploads/b3136bd0-48d1-4d0a-9ca2-6a9212a9c785.png" alt="Marketing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
     title: "Marketing Flyers",
     description: "Attract new buyers with the best loan programs available in today's market and build a powerful and compelling buyer presentation!",
     buttonText: "View Templates"
   }, {
-    icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" className="w-full h-full object-contain -mb-8" loading="lazy" />,
+    icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
     title: "Listing Flyers",
     description: "Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.",
     buttonText: "Browse Designs"
@@ -48,15 +48,15 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 h-full flex flex-col px-1">
               <CardHeader className="text-center p-0 flex-1 flex flex-col">
-                <div className="w-full h-[400px] md:h-[480px] flex items-center justify-center -my-4">
+                <div className="w-full h-64 flex items-center justify-center">
                   <div className="w-full h-full">
                     {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 -mt-8">
+                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-4">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground font-poppins -mt-2">
+                <CardDescription className="text-muted-foreground font-poppins">
                   {service.description}
                 </CardDescription>
               </CardHeader>
