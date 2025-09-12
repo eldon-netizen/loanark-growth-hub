@@ -107,10 +107,13 @@ const Flyers = () => {
       {categories.map((category, categoryIndex) => (
         <section key={categoryIndex} className="py-16 px-4">
           <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-4 text-center text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-8 text-center text-foreground">
               {category}
             </h2>
-              <div className={`grid gap-8 mt-12 justify-center place-items-center ${
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto font-poppins">
+              Professional marketing materials designed to help you attract more clients and close more deals.
+            </p>
+            <div className={`grid gap-8 justify-center place-items-center ${
                 flyerTemplates.filter(f => f.category === category).length === 1
                   ? "grid-cols-1 max-w-md mx-auto"
                   : flyerTemplates.filter(f => f.category === category).length === 2
@@ -120,28 +123,34 @@ const Flyers = () => {
               {flyerTemplates
                 .filter(flyer => flyer.category === category)
                 .map((flyer) => (
-                  <Card key={flyer.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 w-full max-w-md mx-auto">
+                  <Card key={flyer.id} className="group hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] border border-border/50 hover:border-loanark-blue/30 w-full max-w-sm mx-auto bg-card/50 backdrop-blur-sm">
                     <CardHeader className="p-0">
-                      <div className="relative overflow-hidden rounded-t-lg">
+                      <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-muted/30 to-muted/60" style={{ paddingBottom: '133.33%' }}>
                         <img 
                           src={flyer.image} 
                           alt={flyer.title}
-                          className="w-full h-80 object-contain object-top bg-gray-50 group-hover:scale-105 transition-transform duration-300"
+                          className="absolute inset-0 w-full h-full object-contain object-top group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent group-hover:from-black/10 transition-all duration-500" />
+                        <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-4 h-4 text-loanark-blue" />
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <CardTitle className="text-xl font-montserrat font-bold mb-3 text-foreground group-hover:text-loanark-blue transition-colors duration-300">
+                          {flyer.title}
+                        </CardTitle>
+                        <CardDescription className="text-muted-foreground mb-0 text-sm leading-relaxed font-poppins">
+                          {flyer.description}
+                        </CardDescription>
                       </div>
                     </CardHeader>
-                    <CardContent className="p-6">
-                      <CardTitle className="text-xl font-montserrat mb-3 text-foreground">
-                        {flyer.title}
-                      </CardTitle>
-                      <CardDescription className="text-muted-foreground mb-6 text-base leading-relaxed">
-                        {flyer.description}
-                      </CardDescription>
-                      <div className="flex gap-3">
+                    <CardContent className="p-6 pt-0">
+                      <div className="flex gap-3 mt-4">
                         <Button 
-                          variant="default" 
-                          className="flex-1 bg-loanark-blue hover:bg-loanark-blue/90"
+                          variant="default"
+                          size="sm"
+                          className="flex-1 bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                         >
                           <Download className="w-4 h-4 mr-2" />
                           Request Now
@@ -149,7 +158,7 @@ const Flyers = () => {
                         <Button 
                           variant="outline" 
                           size="icon"
-                          className="hover:bg-primary/10"
+                          className="hover:bg-loanark-blue/10 border-loanark-blue/20 hover:border-loanark-blue/40 transition-all duration-300"
                         >
                           <Eye className="w-4 h-4" />
                         </Button>
