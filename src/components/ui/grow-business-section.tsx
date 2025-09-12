@@ -17,13 +17,6 @@ const GrowBusinessSection = () => {
       description: "The Stolan Team partners with agents and their sellers to provide below market interest rates to homebuyers and help listings sell faster, sharing the cost of a temporary buydown with the seller to make the offer more attractive and cost effective.",
       features: ["Builder relationship strategies", "New construction processes", "Sales techniques"],
       buttonText: "Get Strategies"
-    },
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "Hometown Heroes",
-      description: "Special programs and marketing strategies for serving military, teachers, firefighters, and other community heroes.",
-      features: ["Hero program templates", "Community outreach tools", "Specialized loan programs"],
-      buttonText: "Learn More"
     }
   ];
 
@@ -41,7 +34,7 @@ const GrowBusinessSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {playbooks.map((playbook, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 bg-card h-full flex flex-col">
               <CardHeader className="text-center pb-6">
