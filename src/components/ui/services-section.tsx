@@ -70,9 +70,9 @@ const ServicesSection = () => {
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - Aligned to bottom */}
+              {/* IMAGE CONTAINER - Position context for absolute child */}
               <div
-                className="h-64 relative flex items-end justify-center flex-shrink-0"
+                className="h-64 relative flex-shrink-0"
                 style={{
                   overflow: 'visible',
                   marginTop: '0',
@@ -81,15 +81,16 @@ const ServicesSection = () => {
                   zIndex: 20
                 }}
               >
-                {/* IMAGE WRAPPER - Positioned at bottom with 30% larger size */}
+                {/* IMAGE WRAPPER - Positioned at bottom-center */}
                 <div
-                  className="absolute transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
+                  className="transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
                   style={{
+                    position: 'absolute',
                     width: '364px',   // 280px * 1.3 = 364px
                     height: '364px',  // 280px * 1.3 = 364px
-                    bottom: '0',      // Align to bottom edge
+                    bottom: '0',      // Stick to bottom
                     left: '50%',
-                    transform: 'translateX(-50%)',  // Center horizontally
+                    transform: 'translateX(-50%)',  // Center horizontally only
                     transformOrigin: 'bottom center',  // Scale from bottom
                     zIndex: 30
                   }}
