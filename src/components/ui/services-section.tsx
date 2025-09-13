@@ -53,42 +53,40 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{
         overflow: 'visible'
       }}>
-          {services.map((service, index) => <Card key={index} className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible" style={{
-          animationDelay: `${index * 0.1}s`,
-          overflow: 'visible !important',
-          clipPath: 'none',
-          zIndex: 1
-        }} onMouseEnter={(e) => {
-          e.currentTarget.style.zIndex = '50';
-        }} onMouseLeave={(e) => {
-          e.currentTarget.style.zIndex = '1';
-        }}>
-            {/* Image Container - Positioned to overflow outside card boundaries */}
-            <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-32 h-32 z-popover">
-              <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4">
-                {service.icon}
-              </div>
-            </div>
-
-            <div className="h-full flex flex-col hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] pt-[64px] overflow-visible relative">
-              <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col">
-                {/* Text content aligned with image */}
-                <div className="flex flex-col justify-end flex-1 pb-0">
-                  <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
-                    {service.description}
-                  </CardDescription>
+          {services.map((service, index) => (
+            <div key={index} className="group relative" style={{
+              overflow: 'visible',
+              animationDelay: `${index * 0.1}s`
+            }}>
+              {/* Image Container - Now a sibling to Card, free to overflow */}
+              <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-40 h-40 z-50 pointer-events-none">
+                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4">
+                  {service.icon}
                 </div>
-              </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0 border-t-0">
-              <Button variant="serviceOutline" className="font-medium animated-element">
-                {service.buttonText}
-              </Button>
-              </CardContent>
+              </div>
+
+              <Card className="border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="h-full flex flex-col pt-[64px]">
+                  <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col">
+                    {/* Text content aligned with image */}
+                    <div className="flex flex-col justify-end flex-1 pb-0">
+                      <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
+                        {service.description}
+                      </CardDescription>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0 border-t-0">
+                    <Button variant="serviceOutline" className="font-medium animated-element">
+                      {service.buttonText}
+                    </Button>
+                  </CardContent>
+                </div>
+              </Card>
             </div>
-            </Card>)}
+          ))}
         </div>
       </div>
     </section>;
