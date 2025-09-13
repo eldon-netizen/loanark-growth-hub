@@ -16,16 +16,16 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto p-[15px] relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-primary-foreground mb-6 leading-relaxed">
             Free On‑Demand 
             <span className="text-loanark-light-blue"> Mortgage Marketing</span>
-            <br className="mb-4" />
-            <span className="block mt-5">Solution for Real Estate Professionals</span>
+            <br />
+            <span className="block mt-4">Solution for Real Estate Professionals</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 font-poppins mb-8 max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
             Grow your mortgage business with professional marketing materials, 
             proven sales strategies, and cutting-edge tools designed specifically 
             for real estate professionals.
@@ -33,17 +33,16 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
-              size="lg" 
-              className="bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold text-lg px-8 py-4 h-auto shadow-glow transition-all duration-300 hover:scale-105"
+              variant="heroPrimary"
+              size="hero"
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
             <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-loanark-light-blue bg-loanark-navy/60 text-primary-foreground hover:bg-loanark-light-blue hover:text-loanark-navy font-poppins font-semibold text-lg px-8 py-4 h-auto transition-all duration-300 backdrop-blur-sm"
+              variant="heroOutline"
+              size="hero"
             >
               Learn More
             </Button>
@@ -55,7 +54,7 @@ const HeroSection = () => {
               <div className="text-3xl md:text-4xl font-montserrat font-bold text-loanark-light-blue mb-2">
                 10K+
               </div>
-              <div className="text-primary-foreground/80 font-poppins">
+              <div className="text-primary-foreground/80">
                 Active Users
               </div>
             </div>
@@ -63,7 +62,7 @@ const HeroSection = () => {
               <div className="text-3xl md:text-4xl font-montserrat font-bold text-loanark-light-blue mb-2">
                 500+
               </div>
-              <div className="text-primary-foreground/80 font-poppins">
+              <div className="text-primary-foreground/80">
                 Marketing Templates
               </div>
             </div>
@@ -71,7 +70,7 @@ const HeroSection = () => {
               <div className="text-3xl md:text-4xl font-montserrat font-bold text-loanark-light-blue mb-2">
                 99%
               </div>
-              <div className="text-primary-foreground/80 font-poppins">
+              <div className="text-primary-foreground/80">
                 Customer Satisfaction
               </div>
             </div>

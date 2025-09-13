@@ -30,7 +30,7 @@ const GrowBusinessSection = () => {
             Grow Your 
             <span className="text-loanark-red"> Business</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-poppins max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Access our exclusive playbooks and strategies that have helped thousands 
             of mortgage professionals scale their business and increase their income.
           </p>
@@ -46,7 +46,7 @@ const GrowBusinessSection = () => {
                 <CardTitle className="text-2xl font-montserrat font-bold text-foreground mb-3">
                   {playbook.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground font-poppins text-base leading-relaxed">
+                <CardDescription className="text-muted-foreground text-base leading-relaxed">
                   {playbook.description}
                 </CardDescription>
               </CardHeader>
@@ -55,7 +55,7 @@ const GrowBusinessSection = () => {
                   <h4 className="font-montserrat font-semibold text-foreground mb-3">What's Included:</h4>
                   <ul className="space-y-2">
                     {playbook.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-muted-foreground font-poppins text-sm">
+                      <li key={featureIndex} className="flex items-center text-muted-foreground text-sm">
                         <div className="w-2 h-2 bg-loanark-red rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
@@ -69,7 +69,8 @@ const GrowBusinessSection = () => {
                 >
                   <Button 
                     asChild
-                    className="w-full bg-loanark-red hover:bg-loanark-red/90 text-white font-poppins font-semibold transition-all duration-300 shadow-md hover:shadow-lg mt-auto"
+                    variant="heroPrimary"
+                    className="w-full mt-auto"
                   >
                     <span>{playbook.buttonText}</span>
                   </Button>
@@ -82,11 +83,11 @@ const GrowBusinessSection = () => {
         <div className="text-center mt-12">
           <div className="inline-flex items-center bg-loanark-light-blue/10 rounded-full px-6 py-3 mb-6">
             <Award className="h-5 w-5 text-loanark-blue mr-2" />
-            <span className="text-loanark-blue font-poppins font-medium">
+            <span className="text-loanark-blue font-medium">
               Trusted by 10,000+ mortgage professionals
             </span>
           </div>
-          <p className="text-muted-foreground font-poppins max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Join thousands of successful mortgage professionals who have transformed 
             their business with our proven strategies and tools.
           </p>

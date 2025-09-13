@@ -50,7 +50,7 @@ const ServicesSection = () => {
             Everything You Need to 
             <span className="text-loanark-red"> Succeed</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-poppins max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Complete marketing solutions designed specifically for mortgage professionals 
             and real estate agents to grow their business.
           </p>
@@ -70,12 +70,12 @@ const ServicesSection = () => {
                 <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-4">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground font-poppins">
+                <CardDescription className="text-muted-foreground">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-0 mt-auto">
-                <Button variant="outline" className="w-full font-poppins font-medium border-loanark-blue text-loanark-blue hover:bg-loanark-blue hover:text-white transition-all duration-300 mt-1">
+                <Button variant="serviceOutline" className="w-full font-medium mt-1">
                   {service.buttonText}
                 </Button>
               </CardContent>

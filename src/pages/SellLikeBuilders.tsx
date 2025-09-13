@@ -3,7 +3,7 @@ import Footer from "@/components/ui/footer";
 
 const SellLikeBuilders = () => {
   return (
-    <div className="min-h-screen bg-background font-poppins">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       <section className="py-20 px-4">

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,9 +11,9 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/4fe0652e-11e2-44d0-ab1f-d8bc856afb84.png" 
               alt="LoanArk footer logo" 
-              className="h-[4.5rem] w-auto mb-6"
+              className="h-18 w-auto mb-6"
             />
-            <p className="text-primary-foreground/80 font-poppins mb-6 max-w-md">
+            <p className="text-primary-foreground/80 mb-6 max-w-md">
               Empowering mortgage professionals and real estate agents with cutting-edge 
               marketing solutions and proven business strategies.
             </p>
@@ -36,12 +37,12 @@ const Footer = () => {
           <div>
             <h3 className="font-montserrat font-semibold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors font-poppins">Home</a></li>
-              <li><a href="#flyers" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors font-poppins">Flyers</a></li>
-              <li><a href="#business-development" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors font-poppins">Business Development</a></li>
-              <li><a href="#ultimate-listing" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors font-poppins">Ultimate Listing Tool</a></li>
-              <li><a href="#sell-builders" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors font-poppins">Sell Like the Builders</a></li>
-              <li><a href="#events" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors font-poppins">Events</a></li>
+              <li><Link to="/" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors">Home</Link></li>
+              <li><Link to="/flyers" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors">Flyers</Link></li>
+              <li><Link to="/#business-development" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors">Business Development</Link></li>
+              <li><Link to="/ultimate-listing-tool" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors">Ultimate Listing Tool</Link></li>
+              <li><Link to="/sell-like-builders" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors">Sell Like the Builders</Link></li>
+              <li><Link to="/events" className="text-primary-foreground/80 hover:text-loanark-light-blue transition-colors">Events</Link></li>
             </ul>
           </div>
 
@@ -51,15 +52,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-loanark-light-blue mr-3 flex-shrink-0" />
-                <span className="text-primary-foreground/80 font-poppins">(555) 123-4567</span>
+                <span className="text-primary-foreground/80">(555) 123-4567</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-loanark-light-blue mr-3 flex-shrink-0" />
-                <span className="text-primary-foreground/80 font-poppins">info@loanark.com</span>
+                <span className="text-primary-foreground/80">info@loanark.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-loanark-light-blue mr-3 flex-shrink-0 mt-1" />
-                <span className="text-primary-foreground/80 font-poppins">
+                <span className="text-primary-foreground/80">
                   123 Business Drive<br />
                   Suite 456<br />
                   City, State 12345
@@ -70,17 +71,17 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-primary-foreground/60 font-poppins text-sm">
+          <p className="text-primary-foreground/60 text-sm">
             © 2024 LoanArk. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-primary-foreground/60 hover:text-loanark-light-blue transition-colors font-poppins text-sm">
+            <a href="#" className="text-primary-foreground/60 hover:text-loanark-light-blue transition-colors text-sm">
               Privacy Policy
             </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-loanark-light-blue transition-colors font-poppins text-sm">
+            <a href="#" className="text-primary-foreground/60 hover:text-loanark-light-blue transition-colors text-sm">
               Terms of Service
             </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-loanark-light-blue transition-colors font-poppins text-sm">
+            <a href="#" className="text-primary-foreground/60 hover:text-loanark-light-blue transition-colors text-sm">
               Cookie Policy
             </a>
           </div>
