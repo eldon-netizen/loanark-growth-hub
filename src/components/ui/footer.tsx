@@ -12,7 +12,7 @@ const Footer = () => {
             <div
               className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300"
               style={{
-                marginTop: '3px'  // This moves the WHITE CIRCLE down (adjust as needed)
+                marginTop: '5px'  // This moves the WHITE CIRCLE down (adjust as needed)
               }}
             >
               <img
