@@ -40,7 +40,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/721c0105-99a4-41b0-9993-c3c4ba7cd536.png" 
+              src="/lovable-uploads/loanark_header.png" 
               alt="LoanArk header logo" 
               className="h-18 w-auto"
             />
