@@ -13,7 +13,7 @@ const Footer = () => {
               className="rounded-full bg-white inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300"
               style={{
                 padding: '11px',
-                paddingTop: '12px'  // 1px more padding at top to push logo down
+                paddingTop: '14px'  // 1px more padding at top to push logo down
               }}
             >
               <img
