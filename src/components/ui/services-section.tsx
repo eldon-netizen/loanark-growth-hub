@@ -63,23 +63,10 @@ const ServicesSection = () => {
         }} onMouseLeave={(e) => {
           e.currentTarget.style.zIndex = '1';
         }}>
-            {/* Image Container Wrapper - Direct child of Card, outside scaling context */}
-            <div className="absolute top-[-64px] left-1/2 -translate-x-1/2 w-full overflow-visible z-popover">
-              <div className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible">
-                <div className="w-full h-full transition-all duration-500 ease-out overflow-visible" style={{
-                  transform: 'scale(1.60)'
-                }}>
-              <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible">
-                {/* Image container - allows overflow */}
-                <div className="relative w-full h-48 flex items-center justify-center">
-                  {/* This div will overflow on hover */}
-                  <div className="w-full h-full scale-[1.60] flex items-center justify-center transition-transform duration-500 group-hover:scale-[2.02] group-hover:z-50 group-hover:relative">
-                    {service.icon}
-                  </div>
-                </div>
-                
-              </CardHeader>
-              </div>
+            {/* Image Container - Positioned to overflow outside card boundaries */}
+            <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-32 h-32 z-popover">
+              <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4">
+                {service.icon}
               </div>
             </div>
 
