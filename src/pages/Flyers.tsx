@@ -136,7 +136,7 @@ const Flyers = () => {
                           <Eye className="w-4 h-4 text-loanark-blue" />
                         </div>
                       </div>
-                      <div className="p-6">
+                      <div className="p-6 min-h-[120px]">
                         <CardTitle className="text-xl font-montserrat font-bold mb-3 text-foreground group-hover:text-loanark-blue transition-colors duration-300">
                           {flyer.title}
                         </CardTitle>
