@@ -13,7 +13,7 @@ const Footer = () => {
               <img
                 src="/lovable-uploads/loanark_footer.png"
                 alt="LoanArk footer logo"
-                className="h-27 w-auto"  // Also increase logo size proportionally
+                className="h-20 w-auto"  // Also increase logo size proportionally
               />
             </div>
             <p className="text-primary-foreground/80 mb-space-lg max-w-md leading-relaxed">
