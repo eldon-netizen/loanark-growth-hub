@@ -9,15 +9,21 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-space-2xl">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300">
+            <div
+              className="rounded-full bg-white inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300"
+              style={{
+                padding: '11px',
+                paddingTop: '12px'  // 1px more padding at top to push logo down
+              }}
+            >
               <img
                 src="/lovable-uploads/loanark_footer.png"
                 alt="LoanArk footer logo"
-                className="h-20 w-auto"  // Also increase logo size proportionally
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-primary-foreground/80 mb-space-lg max-w-md leading-relaxed">
-              Empowering mortgage professionals and real estate agents with cutting-edge 
+              Empowering mortgage professionals and real estate agents with cutting-edge
               marketing solutions and proven business strategies.
             </p>
             <div className="flex space-x-space-md">
