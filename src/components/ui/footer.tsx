@@ -8,11 +8,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <img 
-              src="/lovable-uploads/loanark_footer.png" 
-              alt="LoanArk footer logo" 
-              className="h-18 w-auto mb-6"
-            />
+            <div className="rounded-full bg-white p-2 inline-flex items-center justify-center mb-6">
+              <img 
+                src="/lovable-uploads/loanark_footer.png" 
+                alt="LoanArk footer logo" 
+                className="h-18 w-auto"
+              />
+            </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
               Empowering mortgage professionals and real estate agents with cutting-edge 
               marketing solutions and proven business strategies.
