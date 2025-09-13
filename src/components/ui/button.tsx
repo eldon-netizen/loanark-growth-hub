@@ -20,7 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         heroPrimary: "bg-loanark-red hover:bg-loanark-red/90 text-white font-semibold shadow-glow transition-all duration-300 hover:scale-105",
         heroOutline: "border-2 border-loanark-light-blue bg-loanark-navy/60 text-primary-foreground hover:bg-loanark-light-blue hover:text-loanark-navy font-semibold transition-all duration-300 backdrop-blur-sm",
-        serviceOutline: "border-loanark-blue text-loanark-blue hover:bg-loanark-blue hover:text-white transition-all duration-300",
+        serviceOutline: "border border-loanark-blue text-loanark-blue hover:bg-loanark-blue hover:text-white transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
