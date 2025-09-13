@@ -42,7 +42,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/loanark_header.png" 
               alt="LoanArk header logo" 
-              className="h-[38px] w-auto"
+              className="h-[41px] w-auto"
             />
           </div>
 
