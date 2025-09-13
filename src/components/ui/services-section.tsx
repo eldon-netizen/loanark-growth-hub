@@ -92,29 +92,50 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* TEXT DIV - 40% of card height (200px of 500px) */}
+              {/* TEXT DIV - 40% of card height (200px of 500px) - FIXED LAYOUT */}
               <div
                 className="flex flex-col px-6 pb-6 text-center"
                 style={{
                   height: '40%',  // 40% of card
-                  paddingTop: 0,   // Remove top padding
-                  marginTop: 0     // Remove top margin
+                  paddingTop: 0,
+                  marginTop: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'  // Distribute space evenly
                 }}
               >
-                {/* Title */}
-                <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
-                  {service.title}
-                </h3>
+                {/* Title and Description Container */}
+                <div className="flex-1 flex flex-col">
+                  {/* Title */}
+                  <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
+                    {service.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-muted-foreground leading-relaxed text-sm mb-4 flex-1">
-                  {service.description}
-                </p>
+                  {/* Description - Fixed height with scroll if needed */}
+                  <p
+                    className="text-muted-foreground leading-relaxed text-sm"
+                    style={{
+                      flexGrow: 1,
+                      overflow: 'hidden',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 3,  // Limit to 3 lines
+                      WebkitBoxOrient: 'vertical',
+                      textOverflow: 'ellipsis'
+                    }}
+                  >
+                    {service.description}
+                  </p>
+                </div>
 
-                {/* Button */}
+                {/* Button - Always at bottom with consistent spacing */}
                 <Button
                   variant="serviceOutline"
-                  className="font-medium animated-element w-full"
+                  className="font-medium animated-element w-full mt-4"
+                  style={{
+                    flexShrink: 0,  // Prevent button from shrinking
+                    position: 'relative',
+                    zIndex: 10
+                  }}
                 >
                   {service.buttonText}
                 </Button>
