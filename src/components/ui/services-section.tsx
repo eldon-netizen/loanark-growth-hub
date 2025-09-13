@@ -50,22 +50,23 @@ const ServicesSection = () => {
         {/* Grid Container */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
           {services.map((service, index) => (
+            {/* SERVICE WRAPPER - Dynamic space division */}
             <div 
               key={index}
-              className="group flex flex-col h-[450px] bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element overflow-visible"
+              className="group relative h-[400px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{ 
+                overflow: 'visible',
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - 60% of space */}
+              {/* IMAGE CONTAINER - 60% */}
               <div className="h-[60%] relative flex items-center justify-center overflow-visible">
-                {/* Floating Image */}
-                <div className="absolute -top-10 w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2 z-10">
+                <div className="absolute w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2">
                   {service.icon}
                 </div>
               </div>
 
-              {/* TEXT & BUTTON CONTAINER - 40% of space */}
+              {/* TEXT & BUTTON CONTAINER - 40% (Previously CardHeader) */}
               <div className="h-[40%] flex flex-col justify-between p-6 text-center">
                 {/* Title */}
                 <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
@@ -77,7 +78,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
                 
-                {/* Button */}
+                {/* Button (merged into this container) */}
                 <Button variant="serviceOutline" className="font-medium animated-element w-full">
                   {service.buttonText}
                 </Button>
