@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-space-2xl">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-space-lg h-[94px] w-[94px] shadow-custom-lg hover:scale-105 transition-transform duration-300">
-              <img 
-                src="/lovable-uploads/loanark_footer.png" 
-                alt="LoanArk footer logo" 
-                className="h-18 w-auto"
+            <div className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-space-lg h-[141px] w-[141px] shadow-custom-lg hover:scale-105 transition-transform duration-300">
+              <img
+                src="/lovable-uploads/loanark_footer.png"
+                alt="LoanArk footer logo"
+                className="h-27 w-auto"  // Also increase logo size proportionally
               />
             </div>
             <p className="text-primary-foreground/80 mb-space-lg max-w-md leading-relaxed">
