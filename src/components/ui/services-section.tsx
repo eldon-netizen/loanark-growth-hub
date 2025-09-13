@@ -63,14 +63,15 @@ const ServicesSection = () => {
               className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader className="text-center p-space-lg flex-1 flex flex-col">
+              <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible">
+                {/* Image container - allows overflow */}
                 <div className="relative w-full h-48 flex items-center justify-center">
-                  <div className="absolute inset-0 flex items-center justify-center group-hover:z-50">
-                    <div className="w-32 h-32 transition-all duration-500 ease-out group-hover:scale-150 group-hover:w-48 group-hover:h-48 group-hover:-translate-y-4 group-hover:shadow-2xl group-hover:rounded-lg">
-                      {service.icon}
-                    </div>
+                  {/* This div will overflow on hover */}
+                  <div className="w-full h-full scale-[1.60] flex items-center justify-center transition-transform duration-500 group-hover:scale-[2.02] group-hover:z-50 group-hover:relative">
+                    {service.icon}
                   </div>
                 </div>
+                
                 <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-space-sm mt-space-md tracking-wide">
                   {service.title}
                 </CardTitle>
