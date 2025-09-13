@@ -43,8 +43,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center">
-      <div className="container mx-auto px-space-lg max-w-screen-xl">
+    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center overflow-visible">
+      <div className="container mx-auto px-space-lg max-w-screen-xl overflow-visible">
         <div className="text-center mb-space-3xl animate-fade-in">
           <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
             Everything You Need to 
@@ -56,19 +56,24 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-20 overflow-visible">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible"
+              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible hover:z-20"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible">
                 {/* Image container - allows overflow */}
                 <div className="relative w-full h-48 flex items-center justify-center">
                   {/* This div will overflow on hover */}
-                  <div className="w-full h-full scale-[1.60] flex items-center justify-center transition-transform duration-500 group-hover:scale-[2.02] group-hover:z-50 group-hover:relative">
-                    {service.icon}
+                  <div 
+                    className="w-full h-full scale-[1.60] flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-[2.02] group-hover:z-50"
+                    style={{ transformOrigin: 'center bottom' }}
+                  >
+                    <div className="w-full h-full group-hover:-translate-y-12 transition-transform duration-500">
+                      {service.icon}
+                    </div>
                   </div>
                 </div>
                 
