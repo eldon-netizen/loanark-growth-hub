@@ -10,9 +10,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div
-              className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300"
+              className="rounded-full bg-white p-[11px] inline-flex items-center justify-center h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300 relative"
               style={{
-                marginTop: '10px'  // This moves the WHITE CIRCLE down (adjust as needed)
+                top: '15px',  // This should definitely move it down
+                marginBottom: 'calc(1.5rem + 15px)'  // Adjust margin to compensate
               }}
             >
               <img
