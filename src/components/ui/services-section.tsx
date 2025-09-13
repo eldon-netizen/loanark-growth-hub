@@ -35,12 +35,15 @@ const ServicesSection = () => {
 
   return (
     <section
-      className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center"
-      style={{ overflow: 'visible', position: 'relative' }}
+      className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center relative"
+      style={{
+        overflow: 'visible !important',
+        zIndex: 1
+      }}
     >
       <div
         className="container mx-auto px-space-lg max-w-screen-xl"
-        style={{ overflow: 'visible' }}
+        style={{ overflow: 'visible !important' }}
       >
         <div className="text-center mb-space-3xl animate-fade-in">
           <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
@@ -53,71 +56,62 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Grid Container - Allow overflow */}
+        {/* Grid Container */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl"
-          style={{ overflow: 'visible' }}
+          style={{ overflow: 'visible !important' }}
         >
           {services.map((service, index) => (
-            /* SERVICE CARD - Allow overflow with proper z-index */
+            /* SERVICE WRAPPER - Dynamic height with min-height */
             <div
               key={index}
               className="group relative min-h-[450px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{
-                overflow: 'visible',
-                zIndex: 10,
+                overflow: 'visible !important',
+                zIndex: 20 - index, // Higher z-index for first items
                 position: 'relative',
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - Allow overflow with negative margin for pop effect */}
+              {/* IMAGE CONTAINER - This will allow overflow */}
               <div
-                className="h-64 relative flex items-center justify-center flex-shrink-0"
+                className="relative flex items-center justify-center flex-shrink-0"
                 style={{
-                  overflow: 'visible',
-                  marginTop: '-40px',  // Allow image to pop out of card
-                  paddingTop: '40px',  // Compensate for negative margin
-                  zIndex: 20
+                  height: '200px',
+                  overflow: 'visible !important',
+                  marginTop: '-50px', // This makes the image pop out of the card
+                  marginBottom: '20px',
+                  zIndex: 30
                 }}
               >
-                {/* IMAGE WRAPPER - Absolute positioning for overflow effect */}
+                {/* IMAGE WRAPPER - The actual overflowing element */}
                 <div
-                  className="absolute transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
+                  className="absolute transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4"
                   style={{
-                    width: '280px',  // Explicit size for better control
-                    height: '280px',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    zIndex: 30
+                    width: '300px',  // Larger than container
+                    height: '300px', // Larger than container
+                    overflow: 'visible !important',
+                    zIndex: 40
                   }}
                 >
-                  {/* Add shadow effect on hover */}
-                  <div className="relative w-full h-full">
-                    {service.icon}
-                    {/* Optional: Add shadow/glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full pointer-events-none" />
-                  </div>
+                  {service.icon}
                 </div>
               </div>
 
-              {/* TEXT & BUTTON CONTAINER - Adjusted padding */}
-              <div className="flex-1 flex flex-col p-6 text-center" style={{ zIndex: 1 }}>
+              {/* TEXT & BUTTON CONTAINER - Flexible height */}
+              <div className="flex-1 flex flex-col p-6 text-center">
                 {/* Title */}
                 <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
                   {service.title}
                 </h3>
 
-                {/* Description */}
+                {/* Description - grows to fit content */}
                 <p className="text-muted-foreground leading-relaxed text-sm mb-4 flex-1">
                   {service.description}
                 </p>
 
-                {/* Button */}
-                <Button
-                  variant="serviceOutline"
-                  className="font-medium animated-element w-full mt-auto relative z-10"
-                >
+                {/* Button - always at bottom */}
+                <Button variant="serviceOutline" className="font-medium animated-element w-full mt-auto">
                   {service.buttonText}
                 </Button>
               </div>
@@ -125,6 +119,13 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Add this style tag to force overflow */}
+      <style jsx>{`
+        .group:hover {
+          z-index: 50 !important;
+        }
+      `}</style>
     </section>
   );
 };
