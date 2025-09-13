@@ -4,11 +4,15 @@ import heroImage from "@/assets/hero-mortgage.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center bg-gradient-hero"
+      style={{ overflow: 'visible' }}  // Changed from overflow-hidden to visible
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
+        <img
+          src={heroImage}
           alt="Professional mortgage marketing workspace"
           className="w-full h-full object-cover opacity-20 animated-element"
         />
@@ -19,20 +23,20 @@ const HeroSection = () => {
       <div className="container mx-auto px-space-lg relative z-10 max-w-screen-xl">
         <div className="max-w-4xl animate-fade-in">
           <h1 className="fluid-text-5xl font-montserrat font-bold text-primary-foreground mb-space-lg leading-tight tracking-wide">
-            Free On‑Demand 
+            Free On‑Demand
             <span className="text-loanark-light-blue"> Mortgage Marketing</span>
             <br />
             <span className="block mt-space-md">Solution for Real Estate Professionals</span>
           </h1>
-          
+
           <p className="fluid-text-xl text-primary-foreground/90 mb-space-2xl max-w-3xl leading-relaxed">
-            Grow your mortgage business with professional marketing materials, 
-            proven sales strategies, and cutting-edge tools designed specifically 
+            Grow your mortgage business with professional marketing materials,
+            proven sales strategies, and cutting-edge tools designed specifically
             for real estate professionals.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-space-md">
-            <Button 
+            <Button
               variant="heroPrimary"
               size="hero"
               className="animated-element"
@@ -40,8 +44,8 @@ const HeroSection = () => {
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            
-            <Button 
+
+            <Button
               variant="heroOutline"
               size="hero"
               className="animated-element"
