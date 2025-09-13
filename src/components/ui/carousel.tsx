@@ -17,6 +17,7 @@ type CarouselProps = {
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
+  allowOverflow?: boolean  // Added prop for overflow control
 }
 
 type CarouselContextProps = {
@@ -26,6 +27,7 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+  allowOverflow?: boolean  // Added to context
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -52,6 +54,7 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
+      allowOverflow = false,  // Default to false for backward compatibility
       ...props
     },
     ref
@@ -130,12 +133,14 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          allowOverflow,  // Pass to context
         }}
       >
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
           className={cn("relative", className)}
+          style={allowOverflow ? { overflow: 'visible' } : undefined}
           role="region"
           aria-roledescription="carousel"
           {...props}
@@ -148,14 +153,29 @@ const Carousel = React.forwardRef<
 )
 Carousel.displayName = "Carousel"
 
+// Modified CarouselContent with overflow control
+interface CarouselContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  allowOverflow?: boolean;
+}
+
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
+  CarouselContentProps
+>(({ className, allowOverflow: contentOverflow, ...props }, ref) => {
+  const { carouselRef, orientation, allowOverflow: contextOverflow } = useCarousel()
+
+  // Use prop if provided, otherwise use context value
+  const shouldAllowOverflow = contentOverflow ?? contextOverflow ?? false
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div
+      ref={carouselRef}
+      className={cn(
+        !shouldAllowOverflow && "overflow-hidden",
+        className
+      )}
+      style={shouldAllowOverflow ? { overflow: 'visible' } : undefined}
+    >
       <div
         ref={ref}
         className={cn(
