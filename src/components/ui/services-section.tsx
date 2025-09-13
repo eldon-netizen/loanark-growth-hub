@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 const ServicesSection = () => {
   const services = [{
     icon: <img src="/lovable-uploads/b3136bd0-48d1-4d0a-9ca2-6a9212a9c785.png" alt="Marketing Flyers logo" loading="lazy" className="w-full h-full object-cover" />,
@@ -32,7 +33,9 @@ const ServicesSection = () => {
     description: "Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.",
     buttonText: "View Content"
   }];
-  return <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center">
+
+  return (
+    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center">
       <div className="container mx-auto px-space-lg max-w-screen-xl">
         <div className="text-center mb-space-3xl animate-fade-in">
           <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
@@ -44,11 +47,25 @@ const ServicesSection = () => {
             and real estate agents to grow their business.
           </p>
         </div>
-              <Card className="border-t-0 border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]"
-                style={{ animationDelay: `${index * 0.1}s` }}>
+
+        {/* Grid container for cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
+          {services.map((service, index) => (
+            <div key={index} className="group relative h-full">
+              {/* Floating Image - positioned inside container */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 z-10">
+                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-125">
+                  {service.icon}
+                </div>
+              </div>
+
+              {/* Card */}
+              <Card 
+                className="border-t-0 border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="h-full flex flex-col">
                   <CardHeader className="text-center px-space-lg pt-24 flex-1 flex flex-col">
-                    {/* Text content aligned with image */}
                     <div className="flex flex-col justify-end flex-1 pb-0">
                       <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
                         {service.title}
@@ -69,6 +86,8 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;
