@@ -11,31 +11,31 @@ const ServicesSection = () => {
       buttonText: "View Templates"
     },
     {
-      icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
       title: "Listing Flyers",
       description: "Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.",
       buttonText: "Browse Designs"
     },
     {
-      icon: <img src="/lovable-uploads/44699db7-834c-42ab-8ce9-0eb4532ca283.png" alt="Business Development Tools logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/44699db7-834c-42ab-8ce9-0eb4532ca283.png" alt="Business Development Tools logo" loading="lazy" className="w-full h-full object-contain" />,
       title: "Business Development Tools",
       description: "Unique and proven strategies that are sure to generate more buyers and help you become the preferred Agent for small to large businesses. Learn how today!",
       buttonText: "Explore Tools"
     },
     {
-      icon: <img src="/lovable-uploads/fc182628-0ed6-469b-bbdb-101f4d983ac6.png" alt="Ultimate Buyer Presentation logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/fc182628-0ed6-469b-bbdb-101f4d983ac6.png" alt="Ultimate Buyer Presentation logo" loading="lazy" className="w-full h-full object-contain" />,
       title: "Ultimate Buyer Presentation",
       description: "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
       buttonText: "Get Presentation"
     },
     {
-      icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
       title: "Buyer & Seller Scripts",
       description: "Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.",
       buttonText: "Access Scripts"
     },
     {
-      icon: <img src="/lovable-uploads/0f75e774-5e92-4378-8857-0ab117d10954.png" alt="Let's Get Social logo" className="w-full h-full object-contain" loading="lazy" />,
+      icon: <img src="/lovable-uploads/0f75e774-5e92-4378-8857-0ab117d10954.png" alt="Let's Get Social logo" loading="lazy" className="w-full h-full object-contain" />,
       title: "Let's Get Social",
       description: "Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.",
       buttonText: "View Content"
@@ -60,16 +60,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element"
+              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center p-space-lg flex-1 flex flex-col">
-                <div className="w-full flex items-center justify-center overflow-hidden">
-                  <AspectRatio ratio={4 / 3} className="w-full">
-                    <div className="w-full h-full scale-[1.60] flex items-center justify-center transition-transform duration-500 group-hover:scale-[2.02]">
+                <div className="relative w-full h-48 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center group-hover:z-50">
+                    <div className="w-32 h-32 transition-all duration-500 ease-out group-hover:scale-150 group-hover:w-48 group-hover:h-48 group-hover:-translate-y-4 group-hover:shadow-2xl group-hover:rounded-lg">
                       {service.icon}
                     </div>
-                  </AspectRatio>
+                  </div>
                 </div>
                 <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-space-sm mt-space-md tracking-wide">
                   {service.title}
