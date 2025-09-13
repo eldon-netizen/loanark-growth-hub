@@ -59,10 +59,10 @@ const ServicesSection = () => {
           style={{ overflow: 'visible' }}
         >
           {services.map((service, index) => (
-            /* CARD CONTAINER - Increased height to prevent overlap */
+            /* CARD CONTAINER - Increased height for visibility */
             <div
               key={index}
-              className="group relative h-[520px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              className="group relative h-[550px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{
                 overflow: 'visible',
                 zIndex: 10,
@@ -74,6 +74,7 @@ const ServicesSection = () => {
                 className="relative flex items-start justify-center p-0 m-0"
                 style={{
                   height: '300px',
+                  flexShrink: 0,
                   overflow: 'visible'
                 }}
               >
@@ -90,38 +91,36 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* TEXT DIV - Increased to 220px for better spacing */}
+              {/* TEXT DIV - 250px to accommodate all content */}
               <div
-                className="px-6 text-center"
+                className="px-6 pb-6 pt-3 text-center flex flex-col"
                 style={{
-                  height: '220px',  // Increased from 200px
-                  display: 'flex',
-                  flexDirection: 'column',
-                  paddingTop: '10px',
-                  paddingBottom: '20px'
+                  height: '250px',
+                  flexShrink: 0
                 }}
               >
-                {/* Title - Fixed height */}
+                {/* Title */}
                 <h3
-                  className="font-montserrat font-semibold text-foreground tracking-wide"
+                  className="font-montserrat font-semibold text-foreground tracking-wide mb-3"
                   style={{
                     fontSize: '1.125rem',
-                    minHeight: '32px',
-                    marginBottom: '12px'
+                    minHeight: '28px'
                   }}
                 >
                   {service.title}
                 </h3>
 
-                {/* Description - Increased height with scroll for overflow */}
+                {/* Description - Fixed height, truncate if too long */}
                 <div
+                  className="flex-1 mb-4"
                   style={{
-                    flex: '1 1 auto',
-                    minHeight: '100px',  // Increased from 90px
-                    maxHeight: '120px',  // Max height with scroll
-                    marginBottom: '16px',
-                    overflowY: 'auto',
-                    overflowX: 'hidden'
+                    minHeight: '120px',
+                    maxHeight: '120px',
+                    overflow: 'hidden',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 5,  // Show max 5 lines
+                    WebkitBoxOrient: 'vertical',
+                    lineClamp: 5
                   }}
                 >
                   <p className="text-muted-foreground leading-relaxed text-sm">
@@ -129,22 +128,17 @@ const ServicesSection = () => {
                   </p>
                 </div>
 
-                {/* Button - Fixed at bottom with consistent spacing */}
-                <div style={{
-                  marginTop: 'auto',
-                  paddingTop: '8px'  // Ensure space between text and button
-                }}>
-                  <Button
-                    variant="serviceOutline"
-                    className="font-medium animated-element w-full"
-                    style={{
-                      position: 'relative',
-                      zIndex: 10
-                    }}
-                  >
-                    {service.buttonText}
-                  </Button>
-                </div>
+                {/* Button - Always visible at bottom */}
+                <Button
+                  variant="serviceOutline"
+                  className="font-medium animated-element w-full"
+                  style={{
+                    flexShrink: 0,
+                    minHeight: '40px'
+                  }}
+                >
+                  {service.buttonText}
+                </Button>
               </div>
             </div>
           ))}
