@@ -84,7 +84,7 @@ const ServicesSection = () => {
                   style={{
                     width: '364px',   // 1.3x larger
                     height: '364px',
-                    marginTop: '-50px',  // Pull image up to overlap card top
+                    marginTop: '-30px',  // Pull image up to overlap card top
                     zIndex: 20
                   }}
                 >
