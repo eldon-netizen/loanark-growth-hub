@@ -50,11 +50,11 @@ const ServicesSection = () => {
         {/* Grid Container */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
           {services.map((service, index) => (
-            {/* SERVICE WRAPPER - Dynamic space division */}
-            <div 
+            /* SERVICE WRAPPER - Dynamic space division */
+            <div
               key={index}
               className="group relative h-[400px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
-              style={{ 
+              style={{
                 overflow: 'visible',
                 animationDelay: `${index * 0.1}s`
               }}
@@ -72,12 +72,12 @@ const ServicesSection = () => {
                 <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
                   {service.title}
                 </h3>
-                
+
                 {/* Description */}
                 <p className="text-muted-foreground leading-relaxed text-sm flex-1 mb-4">
                   {service.description}
                 </p>
-                
+
                 {/* Button (merged into this container) */}
                 <Button variant="serviceOutline" className="font-medium animated-element w-full">
                   {service.buttonText}
