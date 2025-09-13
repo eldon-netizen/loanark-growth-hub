@@ -32,12 +32,8 @@ const ServicesSection = () => {
     description: "Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.",
     buttonText: "View Content"
   }];
-  return <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center" style={{
-    overflow: 'visible'
-  }}>
-      <div className="container mx-auto px-space-lg max-w-screen-xl" style={{
-      overflow: 'visible'
-    }}>
+  return <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center">
+      <div className="container mx-auto px-space-lg max-w-screen-xl">
         <div className="text-center mb-space-3xl animate-fade-in">
           <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
             Everything You Need to
@@ -48,28 +44,12 @@ const ServicesSection = () => {
             and real estate agents to grow their business.
           </p>
         </div>
-
-        {/* Grid with extra padding top for overflow space */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{
-        overflow: 'visible'
-      }}>
-          {services.map((service, index) => (
-            <div key={index} className="group relative" style={{
-              overflow: 'visible',
-              animationDelay: `${index * 0.1}s`
-            }}>
-              {/* Image Container - Now a sibling to Card, free to overflow */}
-              <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-40 h-40 z-50 pointer-events-none">
-                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4">
-                  {service.icon}
-                </div>
-              </div>
-
-              <Card className="border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]">
-                <div className="h-full flex flex-col pt-[64px]">
-                  <CardHeader className="text-center px-space-lg pt-0 pb-0 flex-1 flex flex-col border-t-0">
+              <Card className="border-t-0 border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]"
+                style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="h-full flex flex-col">
+                  <CardHeader className="text-center px-space-lg pt-24 flex-1 flex flex-col">
                     {/* Text content aligned with image */}
-                    <div className="flex flex-col justify-end flex-1 pb-0 pt-0 border-t-0">
+                    <div className="flex flex-col justify-end flex-1 pb-0">
                       <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
                         {service.title}
                       </CardTitle>
@@ -78,7 +58,7 @@ const ServicesSection = () => {
                       </CardDescription>
                     </div>
                   </CardHeader>
-                  <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-[30px] pt-[19px] my-0 border-t-0">
+                  <CardContent className="text-center mt-auto flex justify-center items-center px-space-lg pb-[30px] pt-[19px] my-0">
                     <Button variant="serviceOutline" className="font-medium animated-element">
                       {service.buttonText}
                     </Button>
