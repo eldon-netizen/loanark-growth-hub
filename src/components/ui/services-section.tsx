@@ -62,6 +62,7 @@ const ServicesSection = () => {
           e.currentTarget.style.zIndex = '1';
         }}>
               <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible relative">
+              </CardHeader>
               <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col overflow-visible relative">
                 {/* Simplified image container for proper overflow */}
                 <div className="relative w-full overflow-visible mb-4">
