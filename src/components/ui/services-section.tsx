@@ -69,13 +69,13 @@ const ServicesSection = () => {
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE DIV - 65% of card height (325px of 500px) */}
+              {/* IMAGE DIV - 60% of card height (300px of 500px) */}
               <div
-                className="relative flex items-start justify-center"
+                className="relative flex items-start justify-center p-0 m-0"
                 style={{
-                  height: '65%',  // 65% of card
-                  padding: 0,
-                  margin: 0,
+                  height: '60%',  // 60% of card
+                  paddingBottom: 0,
+                  marginBottom: 0,
                   overflow: 'visible'
                 }}
               >
@@ -92,11 +92,13 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* TEXT DIV - 35% of card height (175px of 500px) */}
+              {/* TEXT DIV - 40% of card height (200px of 500px) */}
               <div
-                className="flex flex-col p-6 text-center"
+                className="flex flex-col px-6 pb-6 text-center"
                 style={{
-                  height: '35%',  // 35% of card (65% + 35% = 100%)
+                  height: '40%',  // 40% of card
+                  paddingTop: 0,   // Remove top padding
+                  marginTop: 0     // Remove top margin
                 }}
               >
                 {/* Title */}
