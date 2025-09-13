@@ -97,7 +97,7 @@ const ServicesSection = () => {
                 <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
+                <CardDescription className="text-muted-foreground leading-relaxed max-w-none flex items-end">
                   {service.description}
                 </CardDescription>
               </CardHeader>
