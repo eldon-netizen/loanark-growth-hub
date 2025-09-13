@@ -67,7 +67,7 @@ const ServicesSection = () => {
 
               <Card className="border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]">
                 <div className="h-full flex flex-col pt-[64px]">
-                  <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col">
+                  <CardHeader className="text-center px-space-lg pt-0 pb-0 flex-1 flex flex-col border-t-0">
                     {/* Text content aligned with image */}
                     <div className="flex flex-col justify-end flex-1 pb-0">
                       <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
