@@ -75,7 +75,7 @@ const ServicesSection = () => {
                 className="h-64 relative flex items-center justify-center flex-shrink-0"
                 style={{
                   overflow: 'visible',
-                  marginTop: '-40px',  // Allow image to pop out of card
+                  marginTop: '-20px',  // Allow image to pop out of card
                   paddingTop: '40px',  // Compensate for negative margin
                   zIndex: 20
                 }}
