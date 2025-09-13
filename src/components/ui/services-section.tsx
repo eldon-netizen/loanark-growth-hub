@@ -88,7 +88,7 @@ const ServicesSection = () => {
                   </CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[15px] my-0">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[15px] my-0 border-t-0">
                 <Button variant="serviceOutline" className="font-medium animated-element">
                   {service.buttonText}
                 </Button>
