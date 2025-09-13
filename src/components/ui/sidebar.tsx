@@ -226,7 +226,7 @@ const Sidebar = React.forwardRef<
             "group-data-[collapsible=offcanvas]:w-0",
             "group-data-[side=right]:rotate-180",
             variant === "floating" || variant === "inset"
-              ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"
+              ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+theme(spacing.4))]"
               : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
           )}
         />
@@ -238,7 +238,7 @@ const Sidebar = React.forwardRef<
               : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
             // Adjust the padding for floating and inset variants.
             variant === "floating" || variant === "inset"
-              ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
+              ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+theme(spacing.4)+2px)]"
               : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
             className
           )}
@@ -393,18 +393,26 @@ const SidebarSeparator = React.forwardRef<
 })
 SidebarSeparator.displayName = "SidebarSeparator"
 
+// Modified SidebarContent with overflow control
+interface SidebarContentProps extends React.ComponentProps<"div"> {
+  allowOverflow?: boolean;
+}
+
 const SidebarContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
->(({ className, ...props }, ref) => {
+  SidebarContentProps
+>(({ className, allowOverflow = false, ...props }, ref) => {
   return (
     <div
       ref={ref}
       data-sidebar="content"
       className={cn(
-        "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+        "flex min-h-0 flex-1 flex-col gap-2",
+        !allowOverflow && "overflow-auto",
+        !allowOverflow && "group-data-[collapsible=icon]:overflow-hidden",
         className
       )}
+      style={allowOverflow ? { overflow: 'visible' } : undefined}
       {...props}
     />
   )
