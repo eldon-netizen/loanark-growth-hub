@@ -74,7 +74,7 @@ const ServicesSection = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center mt-5">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center mt-3">
                 <Button variant="serviceOutline" className="font-medium mt-1">
                   {service.buttonText}
                 </Button>
