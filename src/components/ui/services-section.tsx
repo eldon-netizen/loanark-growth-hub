@@ -62,7 +62,7 @@ const ServicesSection = () => {
               <CardHeader className="text-center p-0 flex-1 flex flex-col">
                 <div className="w-full flex items-center justify-center overflow-hidden">
                   <AspectRatio ratio={4 / 3} className="w-full">
-                    <div className="w-full h-full scale-[1.08] flex items-center justify-center">
+                    <div className="w-full h-full scale-[1.62] flex items-center justify-center">
                       {service.icon}
                     </div>
                   </AspectRatio>
