@@ -70,25 +70,27 @@ const ServicesSection = () => {
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - Allow overflow with negative margin for pop effect */}
+              {/* IMAGE CONTAINER - Aligned to bottom */}
               <div
-                className="h-64 relative flex items-center justify-center flex-shrink-0"
+                className="h-64 relative flex items-end justify-center flex-shrink-0"
                 style={{
                   overflow: 'visible',
-                  marginTop: '-20px',  // Allow image to pop out of card
-                  paddingTop: '40px',  // Compensate for negative margin
+                  marginTop: '-20px',
+                  paddingTop: '40px',
+                  paddingBottom: '0',
                   zIndex: 20
                 }}
               >
-                {/* IMAGE WRAPPER - Absolute positioning for overflow effect */}
+                {/* IMAGE WRAPPER - Positioned at bottom with 30% larger size */}
                 <div
                   className="absolute transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
                   style={{
-                    width: '280px',  // Explicit size for better control
-                    height: '280px',
-                    top: '50%',
+                    width: '364px',   // 280px * 1.3 = 364px
+                    height: '364px',  // 280px * 1.3 = 364px
+                    bottom: '0',      // Align to bottom edge
                     left: '50%',
-                    transform: 'translate(-50%, -50%)',
+                    transform: 'translateX(-50%)',  // Center horizontally
+                    transformOrigin: 'bottom center',  // Scale from bottom
                     zIndex: 30
                   }}
                 >
