@@ -22,7 +22,7 @@ const ServicesSection = () => {
     description: "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
     buttonText: "Get Presentation"
   }, {
-    icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3fc8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
+    icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
     title: "Buyer & Seller Scripts",
     description: "Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.",
     buttonText: "Access Scripts"
@@ -53,57 +53,52 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Grid Container - Allow overflow */}
+        {/* Grid Container */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl"
           style={{ overflow: 'visible' }}
         >
           {services.map((service, index) => (
-            /* SERVICE CARD - Allow overflow with proper z-index */
+            /* CARD CONTAINER */
             <div
               key={index}
-              className="group relative min-h-[450px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              className="group relative h-[500px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{
                 overflow: 'visible',
                 zIndex: 10,
-                position: 'relative',
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - REDUCED HEIGHT to remove white space */}
+              {/* IMAGE DIV - 65% of card height (325px of 500px) */}
               <div
-                className="relative flex-shrink-0"
+                className="relative flex items-start justify-center"
                 style={{
-                  height: '120px',  // Reduced from 256px to 120px
-                  overflow: 'visible',
-                  zIndex: 20,
-                  position: 'relative'
+                  height: '65%',  // 65% of card
+                  padding: 0,
+                  margin: 0,
+                  overflow: 'visible'
                 }}
               >
-                {/* IMAGE WRAPPER - ABSOLUTE positioned at bottom-center */}
                 <div
-                  className="absolute transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
+                  className="transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2"
                   style={{
-                    width: '364px',   // 280px * 1.3 = 364px
-                    height: '364px',  // 280px * 1.3 = 364px
-                    bottom: '0',      // Stick to bottom of container
-                    left: '50%',
-                    transform: 'translateX(-50%)',  // Center horizontally
-                    transformOrigin: 'bottom center',  // Scale from bottom
-                    zIndex: 30
+                    width: '364px',   // 1.3x larger
+                    height: '364px',
+                    marginTop: '-50px',  // Pull image up to overlap card top
+                    zIndex: 20
                   }}
                 >
-                  {/* Add shadow effect on hover */}
-                  <div className="relative w-full h-full">
-                    {service.icon}
-                    {/* Optional: Add shadow/glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full pointer-events-none" />
-                  </div>
+                  {service.icon}
                 </div>
               </div>
 
-              {/* TEXT & BUTTON CONTAINER - Add top margin if needed */}
-              <div className="flex-1 flex flex-col p-6 pt-2 text-center" style={{ zIndex: 1 }}>
+              {/* TEXT DIV - 35% of card height (175px of 500px) */}
+              <div
+                className="flex flex-col p-6 text-center"
+                style={{
+                  height: '35%',  // 35% of card (65% + 35% = 100%)
+                }}
+              >
                 {/* Title */}
                 <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
                   {service.title}
@@ -117,7 +112,7 @@ const ServicesSection = () => {
                 {/* Button */}
                 <Button
                   variant="serviceOutline"
-                  className="font-medium animated-element w-full mt-auto relative z-10"
+                  className="font-medium animated-element w-full"
                 >
                   {service.buttonText}
                 </Button>
