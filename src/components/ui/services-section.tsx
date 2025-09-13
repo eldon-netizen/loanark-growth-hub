@@ -70,7 +70,7 @@ const ServicesSection = () => {
               </div>
             </div>
 
-            <div className="h-full flex flex-col hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] pt-[64px]">
+            <div className="h-full flex flex-col hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] pt-[64px] overflow-visible relative">
               <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col">
                 {/* Text content aligned with image */}
                 <div className="flex flex-col justify-end flex-1 pb-0">
