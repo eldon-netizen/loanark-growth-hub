@@ -70,7 +70,6 @@ const ServicesSection = () => {
                 <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-4">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground mb-[1.5px]">
                 <CardDescription className="text-muted-foreground">
                   {service.description}
                 </CardDescription>
