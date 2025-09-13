@@ -76,7 +76,7 @@ const ServicesSection = () => {
                 style={{
                   overflow: 'visible',
                   marginTop: '0',
-                  paddingTop: '40px',
+                  paddingTop: '0',
                   paddingBottom: '0',
                   zIndex: 20
                 }}
