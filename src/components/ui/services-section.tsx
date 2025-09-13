@@ -1,49 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
 const ServicesSection = () => {
-  const services = [
-    {
-      icon: <img src="/lovable-uploads/b3136bd0-48d1-4d0a-9ca2-6a9212a9c785.png" alt="Marketing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
-      title: "Marketing Flyers",
-      description: "Attract new buyers with the best loan programs available in today's market and build a powerful and compelling buyer presentation!",
-      buttonText: "View Templates"
-    },
-    {
-      icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
-      title: "Listing Flyers",
-      description: "Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.",
-      buttonText: "Browse Designs"
-    },
-    {
-      icon: <img src="/lovable-uploads/44699db7-834c-42ab-8ce9-0eb4532ca283.png" alt="Business Development Tools logo" loading="lazy" className="w-full h-full object-contain" />,
-      title: "Business Development Tools",
-      description: "Unique and proven strategies that are sure to generate more buyers and help you become the preferred Agent for small to large businesses. Learn how today!",
-      buttonText: "Explore Tools"
-    },
-    {
-      icon: <img src="/lovable-uploads/fc182628-0ed6-469b-bbdb-101f4d983ac6.png" alt="Ultimate Buyer Presentation logo" loading="lazy" className="w-full h-full object-contain" />,
-      title: "Ultimate Buyer Presentation",
-      description: "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
-      buttonText: "Get Presentation"
-    },
-    {
-      icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
-      title: "Buyer & Seller Scripts",
-      description: "Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.",
-      buttonText: "Access Scripts"
-    },
-    {
-      icon: <img src="/lovable-uploads/0f75e774-5e92-4378-8857-0ab117d10954.png" alt="Let's Get Social logo" loading="lazy" className="w-full h-full object-contain" />,
-      title: "Let's Get Social",
-      description: "Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.",
-      buttonText: "View Content"
-    }
-  ];
-
-  return (
-    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center" style={{ overflow: 'visible' }}>
-      <div className="container mx-auto px-space-lg max-w-screen-xl" style={{ overflow: 'visible' }}>
+  const services = [{
+    icon: <img src="/lovable-uploads/b3136bd0-48d1-4d0a-9ca2-6a9212a9c785.png" alt="Marketing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
+    title: "Marketing Flyers",
+    description: "Attract new buyers with the best loan programs available in today's market and build a powerful and compelling buyer presentation!",
+    buttonText: "View Templates"
+  }, {
+    icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
+    title: "Listing Flyers",
+    description: "Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.",
+    buttonText: "Browse Designs"
+  }, {
+    icon: <img src="/lovable-uploads/44699db7-834c-42ab-8ce9-0eb4532ca283.png" alt="Business Development Tools logo" loading="lazy" className="w-full h-full object-contain" />,
+    title: "Business Development Tools",
+    description: "Unique and proven strategies that are sure to generate more buyers and help you become the preferred Agent for small to large businesses. Learn how today!",
+    buttonText: "Explore Tools"
+  }, {
+    icon: <img src="/lovable-uploads/fc182628-0ed6-469b-bbdb-101f4d983ac6.png" alt="Ultimate Buyer Presentation logo" loading="lazy" className="w-full h-full object-contain" />,
+    title: "Ultimate Buyer Presentation",
+    description: "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
+    buttonText: "Get Presentation"
+  }, {
+    icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
+    title: "Buyer & Seller Scripts",
+    description: "Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.",
+    buttonText: "Access Scripts"
+  }, {
+    icon: <img src="/lovable-uploads/0f75e774-5e92-4378-8857-0ab117d10954.png" alt="Let's Get Social logo" loading="lazy" className="w-full h-full object-contain" />,
+    title: "Let's Get Social",
+    description: "Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.",
+    buttonText: "View Content"
+  }];
+  return <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center" style={{
+    overflow: 'visible'
+  }}>
+      <div className="container mx-auto px-space-lg max-w-screen-xl" style={{
+      overflow: 'visible'
+    }}>
         <div className="text-center mb-space-3xl animate-fade-in">
           <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
             Everything You Need to
@@ -56,53 +50,44 @@ const ServicesSection = () => {
         </div>
 
         {/* Grid with extra padding top for overflow space */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{ overflow: 'visible' }}>
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative"
-              style={{ 
-                animationDelay: `${index * 0.1}s`,
-                overflow: 'visible',
-                zIndex: 1
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.zIndex = '50';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.zIndex = '1';
-              }}
-            >
-              <CardHeader className="text-center p-space-lg flex-1 flex flex-col" style={{ overflow: 'visible' }}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{
+        overflow: 'visible'
+      }}>
+          {services.map((service, index) => <Card key={index} className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative" style={{
+          animationDelay: `${index * 0.1}s`,
+          overflow: 'visible',
+          zIndex: 1
+        }} onMouseEnter={e => {
+          e.currentTarget.style.zIndex = '50';
+        }} onMouseLeave={e => {
+          e.currentTarget.style.zIndex = '1';
+        }}>
+              <CardHeader className="text-center p-space-lg flex-1 flex flex-col" style={{
+            overflow: 'visible'
+          }}>
                 {/* Image container with controlled positioning */}
-                <div className="relative w-full flex items-center justify-center" style={{ height: '200px', overflow: 'visible' }}>
+                <div className="relative w-full flex items-center justify-center" style={{
+              height: '200px',
+              overflow: 'visible'
+            }}>
                   {/* Absolute positioned wrapper for proper overflow */}
-                  <div 
-                    className="absolute"
-                    style={{
-                      top: '65%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      width: '100%',
-                      height: '100%',
-                      overflow: 'visible',
-                      zIndex: 'inherit'
-                    }}
-                  >
+                  <div className="absolute" style={{
+                top: '65%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '100%',
+                height: '100%',
+                overflow: 'visible',
+                zIndex: 'inherit'
+              }}>
                     {/* Scaling container */}
-                    <div
-                      className="w-full h-full flex items-center justify-center transition-all duration-500 ease-out"
-                      style={{ 
-                        transform: 'scale(1.60)',
-                        transformOrigin: 'center bottom'
-                      }}
-                    >
-                      <div 
-                        className="w-full h-full transition-all duration-500 group-hover:scale-[1.26] group-hover:-translate-y-8"
-                        style={{ 
-                          transformOrigin: 'center bottom'
-                        }}
-                      >
+                    <div className="w-full h-full flex items-center justify-center transition-all duration-500 ease-out" style={{
+                  transform: 'scale(1.60)',
+                  transformOrigin: 'center bottom'
+                }}>
+                      <div className="w-full h-full transition-all duration-500 group-hover:scale-[1.26] group-hover:-translate-y-8" style={{
+                    transformOrigin: 'center bottom'
+                  }}>
                         {service.icon}
                       </div>
                     </div>
@@ -116,17 +101,14 @@ const ServicesSection = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px]">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0">
                 <Button variant="serviceOutline" className="font-medium animated-element">
                   {service.buttonText}
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServicesSection;
