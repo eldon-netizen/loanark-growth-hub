@@ -50,36 +50,36 @@ const ServicesSection = () => {
         {/* Grid Container */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
           {services.map((service, index) => (
-            /* SERVICE WRAPPER - Dynamic space division */
+            /* SERVICE WRAPPER - Dynamic height with min-height */
             <div
               key={index}
-              className="group relative h-[400px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              className="group relative min-h-[400px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{
                 overflow: 'visible',
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - 60% */}
-              <div className="h-[60%] relative flex items-center justify-center overflow-visible">
+              {/* IMAGE CONTAINER - Fixed height */}
+              <div className="h-48 relative flex items-center justify-center overflow-visible flex-shrink-0">
                 <div className="absolute w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2">
                   {service.icon}
                 </div>
               </div>
 
-              {/* TEXT & BUTTON CONTAINER - 40% (Previously CardHeader) */}
-              <div className="h-[40%] flex flex-col justify-between p-6 text-center">
+              {/* TEXT & BUTTON CONTAINER - Flexible height */}
+              <div className="flex-1 flex flex-col p-6 text-center">
                 {/* Title */}
                 <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
                   {service.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-muted-foreground leading-relaxed text-sm flex-1 mb-4">
+                {/* Description - grows to fit content */}
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4 flex-1">
                   {service.description}
                 </p>
 
-                {/* Button (merged into this container) */}
-                <Button variant="serviceOutline" className="font-medium animated-element w-full">
+                {/* Button - always at bottom */}
+                <Button variant="serviceOutline" className="font-medium animated-element w-full mt-auto">
                   {service.buttonText}
                 </Button>
               </div>
