@@ -53,15 +53,15 @@ const ServicesSection = () => {
             /* SERVICE WRAPPER - Dynamic height with min-height */
             <div
               key={index}
-              className="group relative min-h-[400px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              className="group relative min-h-[450px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{
                 overflow: 'visible',
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - Fixed height */}
-              <div className="h-48 relative flex items-center justify-center overflow-visible flex-shrink-0">
-                <div className="absolute w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2">
+              {/* IMAGE CONTAINER - Fixed height, increased for larger image */}
+              <div className="h-64 relative flex items-center justify-center overflow-visible flex-shrink-0">
+                <div className="absolute w-60 h-60 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2">
                   {service.icon}
                 </div>
               </div>
