@@ -88,29 +88,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-                    <div className="w-full h-full scale-[1.28] flex items-center justify-center">
-                      {service.icon}
-                    </div>
-                  </div>
-                </div>
-                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-4">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground font-poppins">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto">
-                <Button variant="outline" className="w-full font-poppins font-medium border-loanark-blue text-loanark-blue hover:bg-loanark-blue hover:text-white transition-all duration-300 mt-1">
-                  {service.buttonText}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ServicesSection;
