@@ -53,27 +53,14 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{
         overflow: 'visible'
       }}>
-        overflow: 'visible'
-      }}>
           {services.map((service, index) => <Card key={index} className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible" style={{
           animationDelay: `${index * 0.1}s`,
           zIndex: 1
-        }} onMouseEnter={e => {
+        }} onMouseEnter={(e) => {
           e.currentTarget.style.zIndex = '50';
-              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible"
+        }} onMouseLeave={(e) => {
           e.currentTarget.style.zIndex = '1';
-                animationDelay: `${index * 0.1}s`,
-                zIndex: 1
-              <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible relative">
-              onMouseEnter={(e) => {
-                e.currentTarget.style.zIndex = '50';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.zIndex = '1';
-              }}
-              </CardHeader>
-              <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col overflow-visible relative">
-              </CardHeader>
+        }}>
               <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col overflow-visible relative">
                 {/* Simplified image container for proper overflow */}
                 <div className="absolute top-[-64px] left-1/2 -translate-x-1/2 w-full overflow-visible z-20">
