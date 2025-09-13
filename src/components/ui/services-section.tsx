@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ServicesSection = () => {
   const services = [{
@@ -48,40 +47,44 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Grid container for cards */}
+        {/* Grid Container */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
           {services.map((service, index) => (
-            <div key={index} className="group relative h-full">
-              {/* Floating Image - positioned inside container */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 z-10">
-                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-125">
+            <div 
+              key={index} 
+              className="group flex flex-col h-full min-h-[400px] bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              style={{ 
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              {/* Image Container - 60% of space */}
+              <div 
+                className="relative h-[60%] flex items-center justify-center p-8 overflow-visible"
+              >
+                <div className="w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4">
                   {service.icon}
                 </div>
               </div>
 
-              {/* Card */}
-              <Card 
-                className="border-t-0 border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.02]"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="h-full flex flex-col">
-                  <CardHeader className="text-center px-space-lg pt-24 flex-1 flex flex-col">
-                    <div className="flex flex-col justify-end flex-1 pb-0">
-                      <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
-                        {service.title}
-                      </CardTitle>
-                      <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
-                        {service.description}
-                      </CardDescription>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="text-center mt-auto flex justify-center items-center px-space-lg pb-[30px] pt-[19px] my-0">
-                    <Button variant="serviceOutline" className="font-medium animated-element">
-                      {service.buttonText}
-                    </Button>
-                  </CardContent>
+              {/* Text & Button Container - 40% of space */}
+              <div className="h-[40%] flex flex-col justify-between p-6 pt-0">
+                {/* Text Content */}
+                <div className="text-center">
+                  <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {service.description}
+                  </p>
                 </div>
-              </Card>
+
+                {/* Button */}
+                <div className="text-center mt-4">
+                  <Button variant="serviceOutline" className="font-medium animated-element">
+                    {service.buttonText}
+                  </Button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
