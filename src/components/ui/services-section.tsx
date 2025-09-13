@@ -22,7 +22,7 @@ const ServicesSection = () => {
     description: "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
     buttonText: "Get Presentation"
   }, {
-    icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
+    icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3fc8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
     title: "Buyer & Seller Scripts",
     description: "Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.",
     buttonText: "Access Scripts"
@@ -70,13 +70,14 @@ const ServicesSection = () => {
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE CONTAINER - Position context for absolute child */}
+              {/* IMAGE CONTAINER - REDUCED HEIGHT to remove white space */}
               <div
-                className="h-64 relative flex-shrink-0"
+                className="relative flex-shrink-0"
                 style={{
+                  height: '120px',  // Reduced from 256px to 120px
                   overflow: 'visible',
                   zIndex: 20,
-                  position: 'relative'  // Keep this relative for absolute child
+                  position: 'relative'
                 }}
               >
                 {/* IMAGE WRAPPER - ABSOLUTE positioned at bottom-center */}
@@ -101,8 +102,8 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* TEXT & BUTTON CONTAINER - Adjusted padding */}
-              <div className="flex-1 flex flex-col p-6 text-center" style={{ zIndex: 1 }}>
+              {/* TEXT & BUTTON CONTAINER - Add top margin if needed */}
+              <div className="flex-1 flex flex-col p-6 pt-2 text-center" style={{ zIndex: 1 }}>
                 {/* Title */}
                 <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
                   {service.title}
