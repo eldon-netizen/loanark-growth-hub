@@ -109,14 +109,14 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-space-sm tracking-wide">
+                <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center p-space-lg">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center px-space-lg pb-space-lg pt-[21px]">
                 <Button variant="serviceOutline" className="font-medium animated-element">
                   {service.buttonText}
                 </Button>
