@@ -59,21 +59,21 @@ const ServicesSection = () => {
           style={{ overflow: 'visible' }}
         >
           {services.map((service, index) => (
-            /* CARD CONTAINER */
+            /* CARD CONTAINER - Increased height to prevent overlap */
             <div
               key={index}
-              className="group relative h-[500px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              className="group relative h-[520px] flex flex-col bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
               style={{
                 overflow: 'visible',
                 zIndex: 10,
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* IMAGE DIV - 60% of card height (300px of 500px) */}
+              {/* IMAGE DIV - 300px fixed height */}
               <div
                 className="relative flex items-start justify-center p-0 m-0"
                 style={{
-                  height: '300px',  // Fixed height instead of percentage
+                  height: '300px',
                   overflow: 'visible'
                 }}
               >
@@ -90,14 +90,15 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* TEXT DIV - Fixed 200px height with proper alignment */}
+              {/* TEXT DIV - Increased to 220px for better spacing */}
               <div
-                className="px-6 pb-6 text-center"
+                className="px-6 text-center"
                 style={{
-                  height: '200px',  // Fixed height
+                  height: '220px',  // Increased from 200px
                   display: 'flex',
                   flexDirection: 'column',
-                  paddingTop: '0'
+                  paddingTop: '10px',
+                  paddingBottom: '20px'
                 }}
               >
                 {/* Title - Fixed height */}
@@ -105,19 +106,22 @@ const ServicesSection = () => {
                   className="font-montserrat font-semibold text-foreground tracking-wide"
                   style={{
                     fontSize: '1.125rem',
-                    height: '32px',  // Fixed height for title
+                    minHeight: '32px',
                     marginBottom: '12px'
                   }}
                 >
                   {service.title}
                 </h3>
 
-                {/* Description - Fixed height container */}
+                {/* Description - Increased height with scroll for overflow */}
                 <div
                   style={{
-                    height: '90px',  // Fixed height for description area
+                    flex: '1 1 auto',
+                    minHeight: '100px',  // Increased from 90px
+                    maxHeight: '120px',  // Max height with scroll
                     marginBottom: '16px',
-                    overflow: 'hidden'
+                    overflowY: 'auto',
+                    overflowX: 'hidden'
                   }}
                 >
                   <p className="text-muted-foreground leading-relaxed text-sm">
@@ -125,8 +129,11 @@ const ServicesSection = () => {
                   </p>
                 </div>
 
-                {/* Button - Fixed position from bottom */}
-                <div style={{ marginTop: 'auto' }}>
+                {/* Button - Fixed at bottom with consistent spacing */}
+                <div style={{
+                  marginTop: 'auto',
+                  paddingTop: '8px'  // Ensure space between text and button
+                }}>
                   <Button
                     variant="serviceOutline"
                     className="font-medium animated-element w-full"
