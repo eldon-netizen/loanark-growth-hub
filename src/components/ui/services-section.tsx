@@ -53,53 +53,40 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{
         overflow: 'visible'
       }}>
-          {services.map((service, index) => <Card key={index} className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative" style={{
+          {services.map((service, index) => <Card key={index} className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible" style={{
           animationDelay: `${index * 0.1}s`,
-          overflow: 'visible',
           zIndex: 1
         }} onMouseEnter={e => {
           e.currentTarget.style.zIndex = '50';
         }} onMouseLeave={e => {
           e.currentTarget.style.zIndex = '1';
         }}>
-              <CardHeader className="text-center p-space-lg flex-1 flex flex-col" style={{
-            overflow: 'visible'
-          }}>
-                {/* Image container with controlled positioning */}
-                <div className="relative w-full flex items-center justify-center" style={{
-              height: '200px',
-              overflow: 'visible'
-            }}>
-                  {/* Absolute positioned wrapper for proper overflow */}
-                  <div className="absolute" style={{
-                top: '65%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '100%',
-                height: '100%',
-                overflow: 'visible',
-                zIndex: 'inherit'
-              }}>
-                    {/* Scaling container */}
-                    <div className="w-full h-full flex items-center justify-center transition-all duration-500 ease-out" style={{
-                  transform: 'scale(1.60)',
-                  transformOrigin: 'center bottom'
-                }}>
-                      <div className="w-full h-full transition-all duration-500 group-hover:scale-[1.26] group-hover:-translate-y-8" style={{
-                    transformOrigin: 'center bottom'
-                  }}>
+              <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible relative">
+                {/* Simplified image container for proper overflow */}
+                <div className="relative w-full overflow-visible mb-4">
+                  <div className="w-full h-32 flex items-center justify-center overflow-visible">
+                    <div className="w-full h-full transition-all duration-500 ease-out overflow-visible" style={{
+                      transform: 'scale(1.60)',
+                      transformOrigin: 'center center'
+                    }}>
+                      <div className="w-full h-full transition-all duration-500 group-hover:scale-[1.26] group-hover:-translate-y-8 overflow-visible" style={{
+                        transformOrigin: 'center center'
+                      }}>
                         {service.icon}
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground leading-relaxed max-w-none flex items-end">
-                  {service.description}
-                </CardDescription>
+                {/* Text content aligned with image */}
+                <div className="flex flex-col justify-center flex-1">
+                  <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
+                    {service.description}
+                  </CardDescription>
+                </div>
               </CardHeader>
               <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[15px] my-0">
                 <Button variant="serviceOutline" className="font-medium animated-element">
