@@ -137,10 +137,11 @@ const Flyers = () => {
                         </div>
                       </div>
                       <div className="p-6 min-h-[120px]">
+                      <div className="p-6 h-[160px] flex flex-col">
                         <CardTitle className="text-xl font-montserrat font-bold mb-3 text-foreground group-hover:text-loanark-blue transition-colors duration-300">
                           {flyer.title}
                         </CardTitle>
-                        <CardDescription className="text-muted-foreground mb-0 text-sm leading-relaxed font-poppins">
+                        <CardDescription className="text-muted-foreground mb-0 text-sm leading-relaxed font-poppins overflow-hidden flex-1">
                           {flyer.description}
                         </CardDescription>
                       </div>
