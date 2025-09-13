@@ -8,6 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Core CSS System Variables */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+    
+    /* Shadow system */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+    --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+    
+    /* Transitions */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Border radius system */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    
+    /* Z-index system */
+    --z-dropdown: 10;
+    --z-sticky: 20;
+    --z-fixed: 30;
+    --z-modal-backdrop: 40;
+    --z-modal: 50;
+    --z-popover: 60;
+    --z-tooltip: 70;
+    
     /* LoanArk Brand Colors */
     --loanark-navy: 221 96% 9%;        /* #01082D */
     --loanark-red: 349 84% 46%;        /* #D6131E */
@@ -51,6 +88,9 @@ All colors MUST be HSL.
     --gradient-hero: linear-gradient(135deg, hsl(var(--loanark-navy)), hsl(var(--loanark-dark-blue)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--loanark-red)), hsl(var(--loanark-medium-blue)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--loanark-light-blue) / 0.1));
+    --gradient-noise: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.03) 0%, transparent 50%), 
+                      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.02) 0%, transparent 50%);
 
     /* Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--loanark-navy) / 0.2);
@@ -116,6 +156,157 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  /* Global improvements */
+  * {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-padding-top: 4rem;
+  }
+
+  body {
+    position: relative;
+    line-height: 1.6;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-noise);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    loading: lazy;
+    content-visibility: auto;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+    max-width: 75ch;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  a, button {
+    transition: var(--transition-base);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--loanark-blue));
+    border-radius: var(--radius-lg);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--loanark-medium-blue));
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: hsl(var(--loanark-light-blue));
+    color: hsl(var(--loanark-navy));
+  }
+
+  /* Skip navigation */
+  .skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 8px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    z-index: var(--z-tooltip);
+    transition: var(--transition-base);
+  }
+
+  .skip-nav:focus {
+    top: 6px;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: more) {
+    :root {
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    
+    button, a {
+      outline: 2px solid transparent;
+    }
+    
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
+
+  /* Performance hints */
+  .animated-element {
+    will-change: transform, opacity;
+    contain: layout style paint;
+  }
+
+  /* Fluid typography */
+  .fluid-text-sm {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+  }
+
+  .fluid-text-base {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+  }
+
+  .fluid-text-lg {
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+  }
+
+  .fluid-text-xl {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+
+  .fluid-text-2xl {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .fluid-text-3xl {
+    font-size: clamp(1.875rem, 5vw, 2.5rem);
+  }
+
+  .fluid-text-4xl {
+    font-size: clamp(2.25rem, 6vw, 3rem);
+  }
+
+  .fluid-text-5xl {
+    font-size: clamp(3rem, 8vw, 4rem);
+  }
+
   * {
     @apply border-border;
   }

@@ -34,7 +34,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-background/95 backdrop-blur-md border-b border-border sticky top-0 z-fixed shadow-custom-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -42,7 +42,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/loanark_header.png" 
               alt="LoanArk header logo" 
-              className="h-[41px] w-auto"
+              className="h-[41px] w-auto transition-transform duration-300 hover:scale-105"
             />
           </div>
 
@@ -54,7 +54,7 @@ const Navigation = () => {
                   key={item.label}
                   href={item.href}
                   onClick={item.onClick}
-                  className="text-foreground hover:text-accent transition-colors font-medium text-sm"
+                  className="text-foreground hover:text-accent transition-all duration-300 font-medium text-sm relative py-2 px-1 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
                 >
                   {item.label}
                 </a>
@@ -62,7 +62,7 @@ const Navigation = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="text-foreground hover:text-accent transition-colors font-medium text-sm"
+                  className="text-foreground hover:text-accent transition-all duration-300 font-medium text-sm relative py-2 px-1 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
                 >
                   {item.label}
                 </Link>
@@ -72,7 +72,7 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button variant="default" className="font-medium">
+            <Button variant="default" className="font-medium shadow-custom-sm">
               Get Started
             </Button>
           </div>
@@ -82,6 +82,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="sm"
+              className="hover:bg-accent/10"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -91,14 +92,14 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background">
+          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 item.onClick ? (
                   <a
                     key={item.label}
                     href={item.href}
-                    className="block px-3 py-2 text-foreground hover:text-accent transition-colors font-medium text-sm"
+                    className="block px-3 py-2 text-foreground hover:text-accent transition-all duration-300 font-medium text-sm rounded-md hover:bg-accent/10 min-h-[44px] flex items-center"
                     onClick={item.onClick}
                   >
                     {item.label}
@@ -107,7 +108,7 @@ const Navigation = () => {
                   <Link
                     key={item.label}
                     to={item.href}
-                    className="block px-3 py-2 text-foreground hover:text-accent transition-colors font-medium text-sm"
+                    className="block px-3 py-2 text-foreground hover:text-accent transition-all duration-300 font-medium text-sm rounded-md hover:bg-accent/10 min-h-[44px] flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}

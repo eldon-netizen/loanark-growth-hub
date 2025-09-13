@@ -25,10 +25,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <a href="#main-content" className="skip-nav">
+        Skip to main content
+      </a>
       <Navigation />
-      <HeroSection />
-      <ServicesSection />
-      <GrowBusinessSection />
+      <main id="main-content">
+        <HeroSection />
+        <ServicesSection />
+        <GrowBusinessSection />
+      </main>
       <Footer />
     </div>
   );

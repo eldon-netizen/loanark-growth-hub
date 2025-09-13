@@ -43,39 +43,43 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-foreground mb-6">
+    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center">
+      <div className="container mx-auto px-space-lg max-w-screen-xl">
+        <div className="text-center mb-space-3xl animate-fade-in">
+          <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
             Everything You Need to 
             <span className="text-loanark-red"> Succeed</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="fluid-text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Complete marketing solutions designed specifically for mortgage professionals 
             and real estate agents to grow their business.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 h-full flex flex-col">
-              <CardHeader className="text-center p-0 flex-1 flex flex-col">
+            <Card 
+              key={index} 
+              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardHeader className="text-center p-space-lg flex-1 flex flex-col">
                 <div className="w-full flex items-center justify-center overflow-hidden">
                   <AspectRatio ratio={4 / 3} className="w-full">
-                    <div className="w-full h-full scale-[1.31] flex items-center justify-center">
+                    <div className="w-full h-full scale-[1.31] flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.35]">
                       {service.icon}
                     </div>
                   </AspectRatio>
                 </div>
-                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-4">
+                <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-space-sm mt-space-md tracking-wide">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground border-l-2 border-r-2">
+                <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center mt-3">
-                <Button variant="serviceOutline" className="font-medium mt-1">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center p-space-lg">
+                <Button variant="serviceOutline" className="font-medium animated-element">
                   {service.buttonText}
                 </Button>
               </CardContent>

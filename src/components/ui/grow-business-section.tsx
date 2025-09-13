@@ -23,40 +23,44 @@ const GrowBusinessSection = () => {
   ];
 
   return (
-    <section id="business-development" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-foreground mb-6">
+    <section id="business-development" className="py-space-3xl bg-background min-h-screen flex items-center">
+      <div className="container mx-auto px-space-lg max-w-screen-xl">
+        <div className="text-center mb-space-3xl animate-fade-in">
+          <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
             Grow Your 
             <span className="text-loanark-red"> Business</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="fluid-text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Access our exclusive playbooks and strategies that have helped thousands 
             of mortgage professionals scale their business and increase their income.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-space-2xl max-w-6xl mx-auto">
           {playbooks.map((playbook, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 bg-card h-full flex flex-col">
-              <CardHeader className="text-center pb-6">
-                <div className="mx-auto mb-4 p-4 bg-gradient-accent rounded-full text-white shadow-glow">
+            <Card 
+              key={index} 
+              className="group border-border/50 bg-card/90 backdrop-blur-sm h-full flex flex-col animated-element"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <CardHeader className="text-center pb-space-lg p-space-2xl">
+                <div className="mx-auto mb-space-md p-space-md bg-gradient-accent rounded-full text-white shadow-glow transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   {playbook.icon}
                 </div>
-                <CardTitle className="text-2xl font-montserrat font-bold text-foreground mb-3">
+                <CardTitle className="fluid-text-2xl font-montserrat font-bold text-foreground mb-space-md tracking-wide">
                   {playbook.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground text-base leading-relaxed">
+                <CardDescription className="text-muted-foreground fluid-text-base leading-relaxed max-w-none">
                   {playbook.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="pt-0 mt-auto flex flex-col">
-                <div className="mb-6">
-                  <h4 className="font-montserrat font-semibold text-foreground mb-3">What's Included:</h4>
-                  <ul className="space-y-2">
+              <CardContent className="pt-0 mt-auto flex flex-col p-space-2xl">
+                <div className="mb-space-lg">
+                  <h4 className="font-montserrat font-semibold text-foreground mb-space-md">What's Included:</h4>
+                  <ul className="space-y-space-sm">
                     {playbook.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-muted-foreground text-sm">
-                        <div className="w-2 h-2 bg-loanark-red rounded-full mr-3 flex-shrink-0"></div>
+                      <li key={featureIndex} className="flex items-center text-muted-foreground fluid-text-sm">
+                        <div className="w-2 h-2 bg-loanark-red rounded-full mr-space-md flex-shrink-0 animate-pulse"></div>
                         {feature}
                       </li>
                     ))}
@@ -66,6 +70,7 @@ const GrowBusinessSection = () => {
                   href={playbook.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="animated-element"
                 >
                   <Button 
                     asChild
@@ -80,14 +85,14 @@ const GrowBusinessSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center bg-loanark-light-blue/10 rounded-full px-6 py-3 mb-6">
-            <Award className="h-5 w-5 text-loanark-blue mr-2" />
+        <div className="text-center mt-space-3xl animate-fade-in">
+          <div className="inline-flex items-center bg-loanark-light-blue/10 rounded-full px-space-lg py-space-md mb-space-lg backdrop-blur-sm border border-loanark-light-blue/20 hover:scale-105 transition-transform duration-300">
+            <Award className="h-5 w-5 text-loanark-blue mr-space-sm" />
             <span className="text-loanark-blue font-medium">
               Trusted by 10,000+ mortgage professionals
             </span>
           </div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Join thousands of successful mortgage professionals who have transformed 
             their business with our proven strategies and tools.
           </p>
