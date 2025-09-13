@@ -50,7 +50,7 @@ const ServicesSection = () => {
               <CardHeader className="text-center p-0 flex-1 flex flex-col">
                 <div className="w-full h-96 flex items-center justify-center overflow-hidden">
                   <div className="w-full h-full">
-                    <div className="w-full h-full scale-[1.5] flex items-center justify-center">
+                    <div className="w-full h-full scale-[1.48] flex items-center justify-center">
                       {service.icon}
                     </div>
                   </div>
