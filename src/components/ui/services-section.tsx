@@ -51,39 +51,36 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl">
           {services.map((service, index) => (
             <div 
-              key={index} 
-              className="group flex flex-col h-full min-h-[400px] bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element"
+              key={index}
+              className="group flex flex-col h-[450px] bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animated-element overflow-visible"
               style={{ 
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              {/* Image Container - 60% of space */}
-              <div 
-                className="relative h-[60%] flex items-center justify-center p-8 overflow-visible"
-              >
-                <div className="w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-4">
+              {/* IMAGE CONTAINER - 60% of space */}
+              <div className="h-[60%] relative flex items-center justify-center overflow-visible">
+                {/* Floating Image */}
+                <div className="absolute -top-10 w-40 h-40 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2 z-10">
                   {service.icon}
                 </div>
               </div>
 
-              {/* Text & Button Container - 40% of space */}
-              <div className="h-[40%] flex flex-col justify-between p-6 pt-0">
-                {/* Text Content */}
-                <div className="text-center">
-                  <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {service.description}
-                  </p>
-                </div>
-
+              {/* TEXT & BUTTON CONTAINER - 40% of space */}
+              <div className="h-[40%] flex flex-col justify-between p-6 text-center">
+                {/* Title */}
+                <h3 className="fluid-text-xl font-montserrat font-semibold text-foreground mb-3 tracking-wide">
+                  {service.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-muted-foreground leading-relaxed text-sm flex-1 mb-4">
+                  {service.description}
+                </p>
+                
                 {/* Button */}
-                <div className="text-center mt-4">
-                  <Button variant="serviceOutline" className="font-medium animated-element">
-                    {service.buttonText}
-                  </Button>
-                </div>
+                <Button variant="serviceOutline" className="font-medium animated-element w-full">
+                  {service.buttonText}
+                </Button>
               </div>
             </div>
           ))}
