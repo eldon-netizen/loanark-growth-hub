@@ -79,7 +79,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Text content aligned with image */}
-                <div className="flex flex-col justify-end flex-1 pb-0">
+                <div className="flex flex-col justify-end flex-1 pb-0 -mb-space-lg">
                   <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
                     {service.title}
                   </CardTitle>
