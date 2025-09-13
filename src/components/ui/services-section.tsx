@@ -65,17 +65,21 @@ const ServicesSection = () => {
         }}>
             {/* Image Container Wrapper - Direct child of Card, outside scaling context */}
             <div className="absolute top-[-64px] left-1/2 -translate-x-1/2 w-full overflow-visible z-popover">
-              <div className="w-full h-32 flex items-center justify-center overflow-visible">
+              <div className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible">
                 <div className="w-full h-full transition-all duration-500 ease-out overflow-visible" style={{
-                  transform: 'scale(1.60)',
-                  transformOrigin: 'center center'
+                  transform: 'scale(1.60)'
                 }}>
-                  <div className="w-full h-full transition-all duration-500 group-hover:scale-[1.26] group-hover:-translate-y-8 overflow-visible" style={{
-                    transformOrigin: 'center center'
-                  }}>
+              <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible">
+                {/* Image container - allows overflow */}
+                <div className="relative w-full h-48 flex items-center justify-center">
+                  {/* This div will overflow on hover */}
+                  <div className="w-full h-full scale-[1.60] flex items-center justify-center transition-transform duration-500 group-hover:scale-[2.02] group-hover:z-50 group-hover:relative">
                     {service.icon}
                   </div>
                 </div>
+                
+              </CardHeader>
+              </div>
               </div>
             </div>
 
@@ -91,7 +95,7 @@ const ServicesSection = () => {
                   </CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center px-space-lg pb-space-lg pt-[21px]">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0 border-t-0">
               <Button variant="serviceOutline" className="font-medium animated-element">
                 {service.buttonText}
               </Button>
