@@ -19,7 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/loanark-growth-hub">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/flyers" element={<Flyers />} />
