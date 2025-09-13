@@ -62,6 +62,7 @@ const ServicesSection = () => {
           e.currentTarget.style.zIndex = '1';
         }}>
               <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible relative">
+              <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col overflow-visible relative">
                 {/* Simplified image container for proper overflow */}
                 <div className="relative w-full overflow-visible mb-4">
                   <div className="w-full h-32 flex items-center justify-center overflow-visible">
@@ -79,7 +80,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Text content aligned with image */}
-                <div className="flex flex-col justify-end flex-1 pb-0 -mb-space-lg">
+                <div className="flex flex-col justify-end flex-1 pb-0">
                   <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-[13px] tracking-wide">
                     {service.title}
                   </CardTitle>
