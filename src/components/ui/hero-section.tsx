@@ -53,7 +53,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-space-2xl mt-space-3xl pt-space-2xl border-t border-loanark-light-blue/30">
             <div className="text-center animated-element hover:scale-105 transition-transform duration-300">
-              <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-space-sm">
+              <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-[12px]">
                 10K+
               </div>
               <div className="text-primary-foreground/80">
@@ -61,7 +61,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="text-center animated-element hover:scale-105 transition-transform duration-300">
-              <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-space-sm">
+              <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-[12px]">
                 500+
               </div>
               <div className="text-primary-foreground/80">
@@ -69,7 +69,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="text-center col-span-2 md:col-span-1 animated-element hover:scale-105 transition-transform duration-300">
-              <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-space-sm">
+              <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-[12px]">
                 99%
               </div>
               <div className="text-primary-foreground/80">
