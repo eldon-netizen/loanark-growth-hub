@@ -101,7 +101,7 @@ const ServicesSection = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0">
+              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[18px] my-0">
                 <Button variant="serviceOutline" className="font-medium animated-element">
                   {service.buttonText}
                 </Button>
