@@ -55,6 +55,8 @@ const ServicesSection = () => {
       }}>
           {services.map((service, index) => <Card key={index} className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible" style={{
           animationDelay: `${index * 0.1}s`,
+          overflow: 'visible !important',
+          clipPath: 'none',
           zIndex: 1
         }} onMouseEnter={(e) => {
           e.currentTarget.style.zIndex = '50';
@@ -62,7 +64,7 @@ const ServicesSection = () => {
           e.currentTarget.style.zIndex = '1';
         }}>
             {/* Image Container Wrapper - Direct child of Card, outside scaling context */}
-            <div className="absolute top-[-64px] left-1/2 -translate-x-1/2 w-full overflow-visible z-20">
+            <div className="absolute top-[-64px] left-1/2 -translate-x-1/2 w-full overflow-visible z-popover">
               <div className="w-full h-32 flex items-center justify-center overflow-visible">
                 <div className="w-full h-full transition-all duration-500 ease-out overflow-visible" style={{
                   transform: 'scale(1.60)',
