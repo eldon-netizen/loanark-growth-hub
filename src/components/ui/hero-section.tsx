@@ -51,7 +51,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-space-2xl mt-space-3xl pt-space-lg border-t border-loanark-light-blue/30">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-space-2xl mt-space-3xl pt-space-md border-t border-loanark-light-blue/30">
             <div className="text-center animated-element hover:scale-105 transition-transform duration-300">
               <div className="fluid-text-4xl font-montserrat font-bold text-loanark-light-blue mb-[12px]">
                 10K+
