@@ -10,10 +10,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div
-              className="rounded-full bg-white inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300"
+              className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-space-lg h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300"
               style={{
-                padding: '11px',
-                paddingTop: '20px'  // 1px more padding at top to push logo down
+                marginTop: '3px'  // This moves the WHITE CIRCLE down (adjust as needed)
               }}
             >
               <img
