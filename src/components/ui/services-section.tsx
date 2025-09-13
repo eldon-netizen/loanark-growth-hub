@@ -61,7 +61,8 @@ const ServicesSection = () => {
         }} onMouseLeave={(e) => {
           e.currentTarget.style.zIndex = '1';
         }}>
-              <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col overflow-visible relative">
+              <div className="h-full flex flex-col hover:shadow-elegant transition-all duration-500 hover:scale-[1.02]">
+                <CardHeader className="text-center px-space-lg pt-space-lg pb-0 flex-1 flex flex-col overflow-visible relative">
                 {/* Simplified image container for proper overflow */}
                 <div className="absolute top-[-64px] left-1/2 -translate-x-1/2 w-full overflow-visible z-20">
                   <div className="w-full h-32 flex items-center justify-center overflow-visible">
@@ -87,12 +88,13 @@ const ServicesSection = () => {
                     {service.description}
                   </CardDescription>
                 </div>
-              </CardHeader>
-              <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0 border-t-0">
+                </CardHeader>
+                <CardContent className="text-center pt-0 mt-auto flex justify-center items-center px-space-lg pb-space-lg pt-[21px] my-0 border-t-0">
                 <Button variant="serviceOutline" className="font-medium animated-element">
                   {service.buttonText}
                 </Button>
-              </CardContent>
+                </CardContent>
+              </div>
             </Card>)}
         </div>
       </div>
