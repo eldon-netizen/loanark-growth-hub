@@ -75,22 +75,19 @@ const ServicesSection = () => {
                 className="h-64 relative flex-shrink-0"
                 style={{
                   overflow: 'visible',
-                  marginTop: '0',
-                  paddingTop: '0',
-                  paddingBottom: '0',
-                  zIndex: 20
+                  zIndex: 20,
+                  position: 'relative'  // Keep this relative for absolute child
                 }}
               >
-                {/* IMAGE WRAPPER - Positioned at bottom-center */}
+                {/* IMAGE WRAPPER - ABSOLUTE positioned at bottom-center */}
                 <div
-                  className="transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
+                  className="absolute transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4"
                   style={{
-                    position: 'absolute',
                     width: '364px',   // 280px * 1.3 = 364px
                     height: '364px',  // 280px * 1.3 = 364px
-                    bottom: '0',      // Stick to bottom
+                    bottom: '0',      // Stick to bottom of container
                     left: '50%',
-                    transform: 'translateX(-50%)',  // Center horizontally only
+                    transform: 'translateX(-50%)',  // Center horizontally
                     transformOrigin: 'bottom center',  // Scale from bottom
                     zIndex: 30
                   }}
