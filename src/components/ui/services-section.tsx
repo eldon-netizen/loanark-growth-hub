@@ -75,7 +75,7 @@ const ServicesSection = () => {
                 className="h-64 relative flex items-end justify-center flex-shrink-0"
                 style={{
                   overflow: 'visible',
-                  marginTop: '-20px',
+                  marginTop: '0',
                   paddingTop: '40px',
                   paddingBottom: '0',
                   zIndex: 20
