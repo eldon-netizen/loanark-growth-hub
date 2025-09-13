@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="rounded-full bg-white p-[9.5px] inline-flex items-center justify-center mb-6 h-[91px] w-[91px]">
+            <div className="rounded-full bg-white p-[11px] inline-flex items-center justify-center mb-6 h-[94px] w-[94px]">
               <img 
                 src="/lovable-uploads/loanark_footer.png" 
                 alt="LoanArk footer logo" 
