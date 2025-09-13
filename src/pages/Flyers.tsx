@@ -10,7 +10,7 @@ const Flyers = () => {
       id: 1,
       title: "Open House Flyer",
       description: "Clean, beautiful, and straight to the point. Perfect for showcasing open house events and property details.",
-      image: "/lovable-uploads/HomebuyerJourney.png",
+      image: "/lovable-uploads/OpenHouseFlyer.png",
       category: "Listing & Open House Flyers"
     },
     {
@@ -24,7 +24,7 @@ const Flyers = () => {
       id: 3,
       title: "Jared Open House Flyer",
       description: "Modern and professional design that captures attention while maintaining sophistication. Ideal for showcasing property highlights and driving qualified traffic to your open house events.",
-      image: "/lovable-uploads/HomebuyerJourney.png",
+      image: "/lovable-uploads/JaredOpenHouseFlyer.png",
       category: "Listing & Open House Flyers"
     },
     {
