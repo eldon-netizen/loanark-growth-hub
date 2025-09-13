@@ -12,8 +12,8 @@ const Footer = () => {
             <div
               className="rounded-full bg-white p-[11px] inline-flex items-center justify-center h-[131px] w-[131px] shadow-custom-lg hover:scale-105 transition-transform duration-300 relative"
               style={{
-                top: '15px',  // This should definitely move it down
-                marginBottom: 'calc(1.5rem + 15px)'  // Adjust margin to compensate
+                top: '17px',  // Moved 2px further down
+                marginBottom: 'calc(1.5rem + 17px)'  // Adjust margin to compensate
               }}
             >
               <img
