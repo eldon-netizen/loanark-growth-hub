@@ -71,11 +71,12 @@ const ServicesSection = () => {
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground mb-[1.5px]">
+                <CardDescription className="text-muted-foreground">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-0 mt-auto">
-                <Button variant="serviceOutline" className="w-full font-medium mt-1">
+                <Button variant="serviceOutline" className="font-medium mt-1">
                   {service.buttonText}
                 </Button>
               </CardContent>
