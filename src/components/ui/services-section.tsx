@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ServicesSection = () => {
   const services = [
@@ -43,41 +42,74 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center overflow-visible">
-      <div className="container mx-auto px-space-lg max-w-screen-xl overflow-visible">
+    <section className="py-space-3xl bg-gradient-subtle min-h-screen flex items-center" style={{ overflow: 'visible' }}>
+      <div className="container mx-auto px-space-lg max-w-screen-xl" style={{ overflow: 'visible' }}>
         <div className="text-center mb-space-3xl animate-fade-in">
           <h2 className="fluid-text-5xl font-montserrat font-bold text-foreground mb-space-lg tracking-wide">
-            Everything You Need to 
+            Everything You Need to
             <span className="text-loanark-red"> Succeed</span>
           </h2>
           <p className="fluid-text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Complete marketing solutions designed specifically for mortgage professionals 
+            Complete marketing solutions designed specifically for mortgage professionals
             and real estate agents to grow their business.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-20 overflow-visible">
+        {/* Grid with extra padding top for overflow space */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-space-2xl pt-16" style={{ overflow: 'visible' }}>
           {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative overflow-visible hover:z-20"
-              style={{ animationDelay: `${index * 0.1}s` }}
+            <Card
+              key={index}
+              className="group border-border/50 h-full flex flex-col backdrop-blur-sm bg-card/80 animated-element relative"
+              style={{ 
+                animationDelay: `${index * 0.1}s`,
+                overflow: 'visible',
+                zIndex: 1
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.zIndex = '50';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.zIndex = '1';
+              }}
             >
-              <CardHeader className="text-center p-space-lg flex-1 flex flex-col overflow-visible">
-                {/* Image container - allows overflow */}
-                <div className="relative w-full h-48 flex items-center justify-center">
-                  {/* This div will overflow on hover */}
+              <CardHeader className="text-center p-space-lg flex-1 flex flex-col" style={{ overflow: 'visible' }}>
+                {/* Image container with controlled positioning */}
+                <div className="relative w-full flex items-center justify-center" style={{ height: '200px', overflow: 'visible' }}>
+                  {/* Absolute positioned wrapper for proper overflow */}
                   <div 
-                    className="w-full h-full scale-[1.60] flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-[2.02] group-hover:z-50"
-                    style={{ transformOrigin: 'center bottom' }}
+                    className="absolute"
+                    style={{
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '100%',
+                      height: '100%',
+                      overflow: 'visible',
+                      zIndex: 'inherit'
+                    }}
                   >
-                    <div className="w-full h-full group-hover:-translate-y-12 transition-transform duration-500">
-                      {service.icon}
+                    {/* Scaling container */}
+                    <div
+                      className="w-full h-full flex items-center justify-center transition-all duration-500 ease-out"
+                      style={{ 
+                        transform: 'scale(1.60)',
+                        transformOrigin: 'center bottom'
+                      }}
+                    >
+                      <div 
+                        className="w-full h-full transition-all duration-500 group-hover:scale-[1.26] group-hover:-translate-y-8"
+                        style={{ 
+                          transformOrigin: 'center bottom'
+                        }}
+                      >
+                        {service.icon}
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-space-sm mt-space-md tracking-wide">
+
+                <CardTitle className="fluid-text-xl font-montserrat font-semibold text-foreground mb-space-sm tracking-wide">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground leading-relaxed max-w-none">
