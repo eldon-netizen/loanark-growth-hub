@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ServicesSection = () => {
   const services = [
@@ -59,8 +60,34 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:scale-105 border-border/50 h-full flex flex-col">
               <CardHeader className="text-center p-0 flex-1 flex flex-col">
-                <div className="w-full h-112 flex items-center justify-center overflow-hidden">
-                  <div className="w-1/2 h-full scale-[1.28] flex items-center justify-center">
+                <div className="w-full flex items-center justify-center overflow-hidden">
+                  <AspectRatio ratio={3 / 4} className="w-full">
+                    <div className="w-full h-full scale-[1.28] flex items-center justify-center">
+                      {service.icon}
+                    </div>
+                  </AspectRatio>
+                </div>
+                <CardTitle className="text-xl font-montserrat font-semibold text-foreground mb-1 mt-4">
+                  {service.title}
+                </CardTitle>
+                <CardDescription className="text-muted-foreground font-poppins">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center pt-0 mt-auto">
+                <Button variant="outline" className="w-full font-poppins font-medium border-loanark-blue text-loanark-blue hover:bg-loanark-blue hover:text-white transition-all duration-300 mt-1">
+                  {service.buttonText}
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
                     <div className="w-full h-full scale-[1.28] flex items-center justify-center">
                       {service.icon}
                     </div>
