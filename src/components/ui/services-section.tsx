@@ -61,7 +61,7 @@ const ServicesSection = () => {
             >
               {/* IMAGE CONTAINER - Fixed height, increased for larger image */}
               <div className="h-64 relative flex items-center justify-center overflow-visible flex-shrink-0">
-                <div className="absolute w-60 h-60 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2">
+                <div className="absolute w-70 h-70 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-2">
                   {service.icon}
                 </div>
               </div>
