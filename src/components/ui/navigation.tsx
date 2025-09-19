@@ -60,7 +60,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/lovable-uploads/loanark_header_2.png"
+              src="/lovable-uploads/loanark_header.png"
               alt="LoanArk header logo"
               className="h-[41px] w-auto transition-transform duration-300 hover:-scale-120"
             />
