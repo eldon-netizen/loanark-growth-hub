@@ -1,37 +1,92 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 const ServicesSection = () => {
-  const services = [{
-    icon: <img src="/lovable-uploads/b3136bd0-48d1-4d0a-9ca2-6a9212a9c785.png" alt="Marketing Flyers logo" loading="lazy" className="w-full h-full object-cover" />,
-    title: "Marketing Flyers",
-    description: "Attract new buyers with the best loan programs available in today's market and build a powerful and compelling buyer presentation!",
-    buttonText: "View Templates"
-  }, {
-    icon: <img src="/lovable-uploads/af612d46-47e9-426d-b3fb-ff1fe24cac63.png" alt="Listing Flyers logo" loading="lazy" className="w-full h-full object-contain" />,
-    title: "Listing Flyers",
-    description: "Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.",
-    buttonText: "Browse Designs"
-  }, {
-    icon: <img src="/lovable-uploads/44699db7-834c-42ab-8ce9-0eb4532ca283.png" alt="Business Development Tools logo" loading="lazy" className="w-full h-full object-contain" />,
-    title: "Business Development Tools",
-    description: "Unique and proven strategies that are sure to generate more buyers and help you become the preferred Agent for small to large businesses. Learn how today!",
-    buttonText: "Explore Tools"
-  }, {
-    icon: <img src="/lovable-uploads/fc182628-0ed6-469b-bbdb-101f4d983ac6.png" alt="Ultimate Buyer Presentation logo" loading="lazy" className="w-full h-full object-contain" />,
-    title: "Ultimate Buyer Presentation",
-    description: "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
-    buttonText: "Get Presentation"
-  }, {
-    icon: <img src="/lovable-uploads/bb5f431b-7a39-44ce-b3c8-a47252a04abf.png" alt="Buyer & Seller Scripts logo" loading="lazy" className="w-full h-full object-contain" />,
-    title: "Buyer & Seller Scripts",
-    description: "Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.",
-    buttonText: "Access Scripts"
-  }, {
-    icon: <img src="/lovable-uploads/0f75e774-5e92-4378-8857-0ab117d10954.png" alt="Let's Get Social logo" loading="lazy" className="w-full h-full object-contain" />,
-    title: "Let's Get Social",
-    description: "Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.",
-    buttonText: "View Content"
-  }];
+  const services = [
+    {
+      icon: (
+        <img
+          src="/lovable-uploads/MarketingFlyers.png"
+          alt="Marketing Flyers logo"
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+      ),
+      title: 'Marketing Flyers',
+      description:
+        "Attract new buyers with the best loan programs available in today's market and build a powerful and compelling buyer presentation!",
+      buttonText: 'View Templates',
+    },
+    {
+      icon: (
+        <img
+          src="/lovable-uploads/ListingFlyers.png"
+          alt="Listing Flyers logo"
+          loading="lazy"
+          className="w-full h-full object-contain"
+        />
+      ),
+      title: 'Listing Flyers',
+      description:
+        'Attract more buyers to your listings by advertising affordable monthly payments and mortgage rate buydowns. Give sellers a taste of what listing with you will look like at your next listing presentations.',
+      buttonText: 'Browse Designs',
+    },
+    {
+      icon: (
+        <img
+          src="/lovable-uploads/businessdevelopmenttools.png"
+          alt="Business Development Tools logo"
+          loading="lazy"
+          className="w-full h-full object-contain"
+        />
+      ),
+      title: 'Business Development Tools',
+      description:
+        'Unique and proven strategies that are sure to generate more buyers and help you become the preferred Agent for small to large businesses. Learn how today!',
+      buttonText: 'Explore Tools',
+    },
+    {
+      icon: (
+        <img
+          src="/lovable-uploads/ultimatebuyerpresentation.png"
+          alt="Ultimate Buyer Presentation logo"
+          loading="lazy"
+          className="w-full h-full object-contain"
+        />
+      ),
+      title: 'Ultimate Buyer Presentation',
+      description:
+        "Strengthen your buyer presentation, demonstrating your competitive advantage and simplifying a buyer's decision to use your services. Order your custom presentation today!",
+      buttonText: 'Get Presentation',
+    },
+    {
+      icon: (
+        <img
+          src="/lovable-uploads/BuyerSellerScripts.png"
+          alt="Buyer & Seller Scripts logo"
+          loading="lazy"
+          className="w-full h-full object-contain"
+        />
+      ),
+      title: 'Buyer & Seller Scripts',
+      description:
+        'Scripts to help you handle objections, motivate sellers and buyers in a constantly transitioning market, and convert more customers.',
+      buttonText: 'Access Scripts',
+    },
+    {
+      icon: (
+        <img
+          src="/lovable-uploads/LetsGetSocial.png"
+          alt="Let's Get Social logo"
+          loading="lazy"
+          className="w-full h-full object-contain"
+        />
+      ),
+      title: "Let's Get Social",
+      description:
+        'Agents will receive weekly posts each with a compelling and thought provoking message highlighting the positive impact of realtors on families buying a home.',
+      buttonText: 'View Content',
+    },
+  ];
 
   return (
     <section
@@ -48,8 +103,8 @@ const ServicesSection = () => {
             <span className="text-loanark-red"> Succeed</span>
           </h2>
           <p className="fluid-text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Complete marketing solutions designed specifically for mortgage professionals
-            and real estate agents to grow their business.
+            Complete marketing solutions designed specifically for mortgage professionals and real
+            estate agents to grow their business.
           </p>
         </div>
 
@@ -66,26 +121,26 @@ const ServicesSection = () => {
               style={{
                 overflow: 'visible',
                 zIndex: 10,
-                animationDelay: `${index * 0.1}s`
+                animationDelay: `${index * 0.1}s`,
               }}
             >
               {/* IMAGE DIV - 65% of card height (325px of 500px) */}
               <div
                 className="relative flex items-start justify-center"
                 style={{
-                  height: '65%',  // 65% of card
+                  height: '65%', // 65% of card
                   padding: 0,
                   margin: 0,
-                  overflow: 'visible'
+                  overflow: 'visible',
                 }}
               >
                 <div
                   className="transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2"
                   style={{
-                    width: '364px',   // 1.3x larger
+                    width: '364px', // 1.3x larger
                     height: '364px',
-                    marginTop: '-50px',  // Pull image up to overlap card top
-                    zIndex: 20
+                    marginTop: '-50px', // Pull image up to overlap card top
+                    zIndex: 20,
                   }}
                 >
                   {service.icon}
@@ -96,7 +151,7 @@ const ServicesSection = () => {
               <div
                 className="flex flex-col p-6 text-center"
                 style={{
-                  height: '35%',  // 35% of card (65% + 35% = 100%)
+                  height: '35%', // 35% of card (65% + 35% = 100%)
                 }}
               >
                 {/* Title */}
@@ -110,10 +165,7 @@ const ServicesSection = () => {
                 </p>
 
                 {/* Button */}
-                <Button
-                  variant="serviceOutline"
-                  className="font-medium animated-element w-full"
-                >
+                <Button variant="serviceOutline" className="font-medium animated-element w-full">
                   {service.buttonText}
                 </Button>
               </div>
